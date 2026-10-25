@@ -8,8 +8,7 @@
 Sluis is a GNOME app for [Zapret](https://github.com/bol-van/zapret), bol-van's
 tool for getting past deep packet inspection. If your internet provider blocks
 Discord or YouTube, Sluis finds a Zapret setting that gets through and keeps it
-working. It replaces Zapret GTK 0.5.4, and you never have to look at an nfqws
-argument.
+working. You never have to look at an nfqws argument.
 
 It isn't a VPN. Your traffic doesn't go through anyone else's server, so your
 connection is as fast as it was before.
@@ -103,7 +102,7 @@ language, add it to `po/LINGUAS` and copy `po/sluis.pot` to `po/<lang>.po`.
 | `crates/helper` | `sluis-helper`, the privileged D-Bus service |
 | `data/` | Desktop file, MetaInfo, GSettings schema, icons, UI, the helper's system files |
 | `po/` | Translations |
-| `docs/` | [User guide](docs/GUIDE.md), [design plan](docs/PLAN.md), [notes on Zapret GTK 0.5.4](docs/zapret-gtk-0.5.4/NOTES.md) |
+| `docs/` | [User guide](docs/GUIDE.md), [design plan](docs/PLAN.md) |
 | `design/` | Mockups (still called Zapret), icon generators and the tools that render them |
 | `packaging/` | The .deb and .rpm build scripts and the RPM spec |
 | `website/` | The download page at rayytor.github.io/sluis |

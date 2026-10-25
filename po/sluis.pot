@@ -83,7 +83,7 @@ msgstr ""
 
 #: data/io.github.rayytor.Sluis.metainfo.xml.in:76
 msgid ""
-"First preview of Sluis, the redesigned Zapret GTK. It checks whether your "
+"First preview of Sluis. It checks whether your "
 "sites open, finds a way around a block in about a minute, switches back by "
 "itself if a change breaks a site, remembers what works on each network, and "
 "can install and update Zapret for you."

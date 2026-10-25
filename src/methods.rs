@@ -1,6 +1,6 @@
 //! The methods Sluis knows, with how the user's sites did the last time
 //! each one was in use. Kept in `~/.local/share/sluis/methods.json`;
-//! the first time, the strategies Zapret GTK 0.5.4 found are imported.
+//! the first time, the strategies saved by the old app are imported.
 //! Also which method opened every site on each network, so switching
 //! networks can switch methods too.
 
@@ -97,7 +97,7 @@ impl Store {
         store
     }
 
-    /// The strategies Zapret GTK 0.5.4 saved, once each.
+    /// The strategies the old app saved, once each.
     fn import_0_5() -> Self {
         #[derive(Deserialize)]
         struct Old {

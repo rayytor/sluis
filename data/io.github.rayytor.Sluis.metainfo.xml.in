@@ -73,7 +73,7 @@
   <releases>
     <release version="0.9.0" date="2026-10-24" type="development">
       <description>
-        <p>First preview of Sluis, the redesigned Zapret GTK. It checks whether your sites open, finds a way around a block in about a minute, switches back by itself if a change breaks a site, remembers what works on each network, and can install and update Zapret for you.</p>
+        <p>First preview of Sluis. It checks whether your sites open, finds a way around a block in about a minute, switches back by itself if a change breaks a site, remembers what works on each network, and can install and update Zapret for you.</p>
       </description>
     </release>
   </releases>

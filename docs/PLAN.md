@@ -1,31 +1,11 @@
-# Sluis 1.0 (formerly Zapret GTK): redesign plan
+# Sluis 1.0: design plan
 
 Goal: a GNOME HIG-compliant GTK4/libadwaita app that a non-technical user can
 open, press one button, and get blocked sites working in about a minute,
 without ever seeing an nfqws argument unless they ask for it.
 
-Basis: the 0.5.4 screenshots and [`NOTES.md`](zapret-gtk-0.5.4/NOTES.md), the installed
-binary (Rust, GTK 4.22, libadwaita 1.9, json-glib), `/opt/zapret/config` and
-`/opt/zapret/blockcheck.sh` on this PC. There is no 0.5.4 source here, so this
-is a rewrite plan, not a refactor plan.
-
----
-
-## 1. What is wrong today (audit against the HIG)
-
-| Area | 0.5.4 | HIG / UX problem |
-|---|---|---|
-| Window structure | Custom title + body + bottom button bar; About, Settings, Apply as big round buttons | No `AdwHeaderBar` actions, no primary menu; About and Preferences belong in the main menu |
-| Main content | 111 raw nfqws command lines with checkboxes | Jargon as UI; no ranking, search, grouping or "recommended" |
-| Multi-select | Ticked rows joined into one `NFQWS_OPT` without `--new` | **Functional bug**: produces an untested mix; must be single choice |
-| Profiles | Buttons "1–10" that look like pagination | Unlabelled; switching may apply silently |
-| Status | Only in Settings | The most important fact (is it working?) is hidden |
-| Settings | Grid of pill buttons; colored custom buttons; "opt", ".config", "json"; bottom row clipped at 450 px | Not an `AdwPreferencesDialog`; developer words; not adaptive; destructive "Delete Zapret" beside everyday "Search" |
-| Dialogs | Custom colored Cancel/Continue | Should be `AdwAlertDialog` with `suggested`/`destructive` response appearances; Cancel is never red |
-| Copy | "Conflicting Applications Detected!", "Start strategy search.", mixed Turkish/English | Header capitalisation, no exclamation marks, no trailing periods on buttons, one locale via gettext |
-| Safety | Load Preset applies at once; Apply restarts service with no undo | Need confirmation or undo/auto-revert |
-| Accessibility | ~220 Tab stops before Apply; buttons with icons only | Needs list navigation, accessible labels, shortcuts |
-| Scan | Wraps full blockcheck (many minutes); calls zapret's own nfqws a "conflict"; no domain suggestions | Slow and confusing |
+Basis: the installed Zapret in `/opt/zapret` (`config`, `blockcheck.sh`) on
+this PC and the GNOME HIG.
 
 ---
 
@@ -183,8 +163,7 @@ hundreds of serial attempts.
    - Picks which protocol(s) the candidates must fix.
 2. **Candidates in priority order:**
    1. last known-good strategy for this network (instant re-validation);
-   2. curated shortlist (~20) from real-world success (e.g. `fake ttl=8` from
-      `NOTES.md`, `fake fooling=ts`, `multisplit`, `fakedsplit`,
+   2. curated shortlist (~20) from real-world success (e.g. `fake ttl=8`, `fake fooling=ts`, `multisplit`, `fakedsplit`,
       `fakeddisorder split-pos=1`, `hostfakesplit`, `syndata`), ordered by a
       shipped JSON that can be updated without a new release;
    3. TTL sweep for fake-based families (TTL 1–12 tested **in parallel**, not
@@ -333,7 +312,7 @@ Audited 2026-10-24 (M7). [x] = checked, with how.
    and update channel), or one global list ranked locally?
 3. Should the helper also manage encrypted DNS (systemd-resolved DoT config),
    or only recommend it?
-4. ~~Name/branding: stay "Zapret GTK" or a user-facing name?~~ Decided
+4. ~~Name/branding?~~ Decided
    2026-10-24: **Sluis** (Dutch for a sluice or lock: it lets traffic
    through). App ID `io.github.rayytor.Sluis`; "Zapret" now only names the
    engine underneath.

@@ -566,7 +566,7 @@ mod tests {
 
     #[test]
     fn a_repeated_option_counts_once_as_its_last_value() {
-        // what Zapret GTK 0.5.4 wrote: every option it tried, one after another
+        // what the old app wrote: every option it tried, one after another
         let s = Strategy::parse(
             "--dpi-desync=fake --dpi-desync-fooling=badseq --dpi-desync-badseq-increment=0 \
              --dpi-desync=fake --dpi-desync-fooling=ts --dpi-desync=fakedsplit \

@@ -1,9 +1,9 @@
-# Turkish translation of Zapret GTK.
+# Turkish translation of Sluis.
 # Copyright (C) 2026 rayytor
-# This file is distributed under the same license as the zapret-gtk package.
+# This file is distributed under the same license as the Sluis package.
 msgid ""
 msgstr ""
-"Project-Id-Version: zapret-gtk\n"
+"Project-Id-Version: sluis\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-25 18:06+0300\n"
 "PO-Revision-Date: 2026-10-24 19:30+0300\n"
@@ -86,12 +86,12 @@ msgstr "Sluis’in hangi sitelere dokunacağını seçin"
 
 #: data/io.github.rayytor.Sluis.metainfo.xml.in:76
 msgid ""
-"First preview of Sluis, the redesigned Zapret GTK. It checks whether your "
+"First preview of Sluis. It checks whether your "
 "sites open, finds a way around a block in about a minute, switches back by "
 "itself if a change breaks a site, remembers what works on each network, and "
 "can install and update Zapret for you."
 msgstr ""
-"Zapret GTK’nin yeniden tasarlanmış hâli olan Sluis’in ilk ön sürümü. "
+"Sluis’in ilk ön sürümü. "
 "Sitelerinizin açılıp açılmadığını denetler, bir engeli aşmanın yolunu "
 "yaklaşık bir dakikada bulur, bir değişiklik bir siteyi bozarsa kendiliğinden "
 "geri döner, her ağda neyin işe yaradığını hatırlar ve Zapret’i sizin için "

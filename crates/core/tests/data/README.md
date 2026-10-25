@@ -1,7 +1,7 @@
 Test data from the desktop PC, 2026-10-24.
 
 - `strategies-blockcheck.txt`: the 111 strategies blockcheck found there, as
-  Zapret GTK 0.5.4 stored them (`~/.config/zapret-gtk/strategies.json`), one
+  the old app stored them (`~/.config/zapret-gtk/strategies.json`), one
   per line.
 - `config.default`: zapret 72.8's stock `/opt/zapret/config.default`.
 - `config.toros-damaged`: the live `/opt/zapret/config`. Its `TPWS_SOCKS_OPT`
