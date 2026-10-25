@@ -4,3 +4,5 @@
 /design/screens/_*.png
 __pycache__/
 /design/ui/sheet.ui
+/dist
+/_build-deb

@@ -1,0 +1,79 @@
+:root {
+  color-scheme: light dark;
+  --bg: #fff;
+  --fg: #222;
+  --muted: #666;
+  --link: #1a5fb4;
+  --line: #ddd;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1e1e1e;
+    --fg: #ddd;
+    --muted: #999;
+    --link: #78aeed;
+    --line: #444;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 18px/1.5 system-ui, sans-serif;
+}
+
+main {
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+
+a {
+  color: var(--link);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header p {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0.25em 0 0;
+}
+
+h2 {
+  margin-top: 2em;
+}
+
+.downloads {
+  padding: 0;
+  list-style: none;
+}
+
+.downloads li {
+  margin: 0.5em 0;
+}
+
+.downloads a {
+  display: block;
+  padding: 0.75em 1em;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9em;
+}

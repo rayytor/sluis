@@ -22,43 +22,45 @@ Zapret yourself: Sluis installs it for you.
 
 ## What you need
 
-- A computer with Linux and the GNOME desktop, such as Fedora or Ubuntu.
+- A computer with Linux and the GNOME desktop: Ubuntu 26.04 or newer, or
+  Fedora 44 or newer.
 - Your computer's password. Sluis asks for it before it changes anything,
   because it changes how your computer reaches websites.
 
 ## Installing Sluis
 
-Sluis isn't in the Software app yet. Until it is, you install it by pasting a
-few commands into the Terminal app. If someone set up your computer for you,
-you may want to ask them to do this part.
+1. Go to [rayytor.github.io/sluis](https://rayytor.github.io/sluis/) and
+   download the file for your system: the **.deb** for Ubuntu, the **.rpm**
+   for Fedora.
+2. Open the file you downloaded. Your Software app opens it.
+3. Click **Install** and type your password.
 
-1. Open **Terminal**.
-2. Paste the line for your system and press Enter. It asks for your password,
-   and installs the tools needed to build Sluis.
+Sluis is now in your list of apps.
 
-   On **Fedora**:
+### Building it yourself
 
-   ```sh
-   sudo dnf install git cargo meson gtk4-devel libadwaita-devel gettext desktop-file-utils
-   ```
+On other systems, you can build Sluis from its code. Open **Terminal** and
+install the tools it needs. On **Fedora**:
 
-   On **Ubuntu**:
+```sh
+sudo dnf install git cargo meson gtk4-devel libadwaita-devel gettext desktop-file-utils
+```
 
-   ```sh
-   sudo apt install git cargo meson libgtk-4-dev libadwaita-1-dev gettext desktop-file-utils
-   ```
+On **Ubuntu**:
 
-3. Paste these lines and press Enter. Building takes a few minutes.
+```sh
+sudo apt install git cargo meson libgtk-4-dev libadwaita-1-dev gettext desktop-file-utils
+```
 
-   ```sh
-   git clone https://github.com/rayytor/sluis.git
-   cd sluis
-   meson setup _build --prefix=/usr
-   meson compile -C _build
-   sudo meson install -C _build
-   ```
+Then build and install it. This takes a few minutes.
 
-4. Close Terminal. Sluis is now in your list of apps.
+```sh
+git clone https://github.com/rayytor/sluis.git
+cd sluis
+meson setup _build --prefix=/usr
+meson compile -C _build
+sudo meson install -C _build
+```
 
 ## The first time you open Sluis
 
@@ -177,7 +179,7 @@ Sluis tells you otherwise.
 | Sluis says | What to do |
 |---|---|
 | *Unblocking Is Off* | Turn on **Unblocking** on the main screen. |
-| *Can't Reach Zapret* or *Can't reach Sluis's helper* | The part of Sluis that changes settings isn't working. Install Sluis again (step 3 of [Installing Sluis](#installing-sluis)). |
+| *Can't Reach Zapret* or *Can't reach Sluis's helper* | The part of Sluis that changes settings isn't working. Install Sluis again (see [Installing Sluis](#installing-sluis)). |
 | *Zapret stopped with that change, so the previous settings are back* | Nothing is broken: Sluis undid the change. Try another method. |
 | *Zapret's settings file is damaged* | Click **Repair**. |
 
@@ -186,7 +188,8 @@ Sluis tells you otherwise.
 If Sluis installed Zapret for you, open **Preferences** and click **Uninstall
 Zapret** first. Sluis only removes what it installed itself.
 
-Then, in Terminal, go to the folder you installed Sluis from and run:
+Then remove Sluis in your Software app, like any other app. If you built it
+yourself, go to the folder you built it in and run this in Terminal instead:
 
 ```sh
 sudo ninja -C _build uninstall

@@ -1,0 +1,62 @@
+name: Release
+
+# Push a tag like v0.9.0 to build the .deb and .rpm and publish them as a
+# release. The website links to releases/latest, so the newest release's
+# files are what people download.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  deb:
+    runs-on: ubuntu-latest
+    container: ubuntu:26.04
+    steps:
+      - name: Install dependencies
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends cargo rustc meson pkg-config \
+            gettext desktop-file-utils libgtk-4-dev libadwaita-1-dev libglib2.0-dev \
+            libglib2.0-dev-bin appstream dpkg-dev ca-certificates
+      - uses: actions/checkout@v4
+      - run: packaging/deb.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deb
+          path: dist/sluis_amd64.deb
+
+  rpm:
+    runs-on: ubuntu-latest
+    container: registry.fedoraproject.org/fedora:44
+    steps:
+      - name: Install dependencies
+        run: >
+          dnf -y install --setopt=install_weak_deps=False rpm-build cargo rust
+          meson gtk4-devel libadwaita-devel glib2-devel gettext-devel
+          desktop-file-utils systemd-rpm-macros
+      - uses: actions/checkout@v4
+      - run: packaging/rpm.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rpm
+          path: dist/sluis.x86_64.rpm
+
+  release:
+    needs: [deb, rpm]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >
+          gh release create "$GITHUB_REF_NAME" dist/sluis_amd64.deb dist/sluis.x86_64.rpm
+          --repo "$GITHUB_REPOSITORY" --title "Sluis ${GITHUB_REF_NAME#v}" --generate-notes
