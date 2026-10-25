@@ -7,6 +7,7 @@ on:
       - website/**
       - data/screenshots/**
       - data/icons/hicolor/scalable/apps/io.github.rayytor.Sluis.svg
+      - design/logo/*.svg
 
 permissions:
   contents: read
@@ -27,6 +28,8 @@ jobs:
           cp website/* _site/
           cp -r data/screenshots _site/
           cp data/icons/hicolor/scalable/apps/io.github.rayytor.Sluis.svg _site/icon.svg
+          cp design/logo/sluis-logo-light.svg _site/logo-light.svg
+          cp design/logo/sluis-logo-dark.svg _site/logo-dark.svg
       - uses: actions/upload-pages-artifact@v3
       - id: deployment
         uses: actions/deploy-pages@v4
