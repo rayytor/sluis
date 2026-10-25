@@ -1,0 +1,12 @@
+[package]
+name = "sluis-scan"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+libc = "0.2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sluis-core = { path = "../core" }

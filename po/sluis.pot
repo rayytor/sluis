@@ -1,0 +1,1201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the sluis package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sluis\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-25 18:06+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: data/io.github.rayytor.Sluis.desktop.in:2
+#: data/io.github.rayytor.Sluis.metainfo.xml.in:7
+#: data/resources/ui/preferences-dialog.ui:87 data/resources/ui/home-page.ui:6
+#: data/resources/ui/home-page.ui:14 data/resources/ui/window.ui:4
+#: src/main.rs:28
+msgid "Sluis"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.desktop.in:3
+#: data/io.github.rayytor.Sluis.metainfo.xml.in:8
+msgid "Open websites your internet provider blocks"
+msgstr ""
+
+#. Translators: search terms to find this app. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#: data/io.github.rayytor.Sluis.desktop.in:10
+msgid "unblock;blocked;censorship;dpi;discord;youtube;sites;"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.metainfo.xml.in:10
+msgid ""
+"Sluis gets around the way internet providers block websites, so sites like "
+"Discord or YouTube open again. It is not a VPN: your connection stays as "
+"fast as it is and nothing goes through anyone else’s computer."
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.metainfo.xml.in:15
+msgid ""
+"Sluis is an easy way to use Zapret, the tool by bol-van that does the "
+"unblocking. It can install Zapret for you."
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.metainfo.xml.in:20
+msgid "Finds a way around blocks on your own connection in about a minute"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.metainfo.xml.in:21
+msgid "Shows at a glance whether your sites open"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.metainfo.xml.in:22
+msgid "Switches back by itself if a change breaks a site"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.metainfo.xml.in:23
+msgid "Remembers what works on each network"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.metainfo.xml.in:57
+msgid "Your sites at a glance"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.metainfo.xml.in:61
+msgid "A way around the block, found in seconds"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.metainfo.xml.in:65
+msgid "Every method, best first"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.metainfo.xml.in:69
+msgid "Choose which sites Sluis touches"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.metainfo.xml.in:76
+msgid ""
+"First preview of Sluis, the redesigned Zapret GTK. It checks whether your "
+"sites open, finds a way around a block in about a minute, switches back by "
+"itself if a change breaks a site, remembers what works on each network, and "
+"can install and update Zapret for you."
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.gschema.xml:16
+msgid ""
+"The user’s sites: checked on the home page, used when looking for a method"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.gschema.xml:24
+msgid "Use Sluis for all sites or only for the user’s sites"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.gschema.xml:28
+msgid "Sites Sluis never touches"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.gschema.xml:33
+#: data/resources/ui/preferences-dialog.ui:17
+msgid "Start with the computer"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.gschema.xml:37
+msgid "Remember a method for each network"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.gschema.xml:41
+msgid "Notify when one of your sites stops opening"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.gschema.xml:45
+msgid "Download new unblocking methods automatically"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.gschema.xml:49
+msgid "Unblock voice and video calls (UDP and QUIC)"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.gschema.xml:53
+msgid "Unblock IPv6 connections too"
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.gschema.xml:57
+msgid "Show nfqws arguments in lists"
+msgstr ""
+
+#: data/resources/shortcuts-dialog.ui:8
+#: data/resources/ui/preferences-dialog.ui:10
+msgid "General"
+msgstr ""
+
+#: data/resources/shortcuts-dialog.ui:11
+msgid "Preferences"
+msgstr ""
+
+#: data/resources/shortcuts-dialog.ui:17
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: data/resources/shortcuts-dialog.ui:23
+msgid "Check Your Sites"
+msgstr ""
+
+#: data/resources/shortcuts-dialog.ui:29 data/resources/ui/scan-dialog.ui:7
+#: data/resources/ui/scan-dialog.ui:18 data/resources/ui/scan-dialog.ui:106
+#: data/resources/ui/scan-dialog.ui:201
+msgid "Unblock Sites"
+msgstr ""
+
+#: data/resources/shortcuts-dialog.ui:35
+msgid "Search Methods"
+msgstr ""
+
+#: data/resources/shortcuts-dialog.ui:41
+msgid "Close Window"
+msgstr ""
+
+#: data/resources/shortcuts-dialog.ui:47
+msgid "Quit"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:14
+msgid "Startup"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:18
+msgid "Sites open as soon as you log in, even if this window is closed"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:25
+msgid "Networks"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:28
+msgid "Remember each Wi‑Fi network"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:29
+msgid "Uses the right method by itself at home, at work or on mobile data"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:34
+msgid "Tell me when a site stops opening"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:35
+msgid "Checks your sites quietly every hour"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:42
+msgid "Updates"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:45
+msgid "Get new methods automatically"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:46
+msgid ""
+"Downloads methods that work well in your country. Nothing about you is sent."
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:56
+msgid "Advanced"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:60
+msgid "Connections"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:63
+msgid "Unblock voice and video calls"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:64
+msgid "Needed for Discord voice chat with some internet providers"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:69
+msgid "IPv6"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:70
+msgid "Leave on unless someone tells you otherwise"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:77
+msgid "For Experts"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:80
+msgid "Show technical details in lists"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:90
+msgid "Version"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:93 src/pages/home.rs:284
+msgid "_Update"
+msgstr ""
+
+#: data/resources/ui/preferences-dialog.ui:109
+msgid "_Uninstall Zapret…"
+msgstr ""
+
+#: data/resources/gtk/menus.ui:7
+msgid "_Preferences"
+msgstr ""
+
+#: data/resources/gtk/menus.ui:11
+msgid "_Keyboard Shortcuts"
+msgstr ""
+
+#: data/resources/gtk/menus.ui:15
+msgid "_About Sluis"
+msgstr ""
+
+#: data/resources/ui/home-page.ui:21 data/resources/ui/welcome-page.ui:20
+msgid "Main Menu"
+msgstr ""
+
+#: data/resources/ui/home-page.ui:28 src/pages/home.rs:278
+msgid "Zapret’s settings file is damaged"
+msgstr ""
+
+#: data/resources/ui/home-page.ui:29 src/pages/home.rs:279
+msgid "_Repair"
+msgstr ""
+
+#: data/resources/ui/home-page.ui:121
+msgid "Unblocking"
+msgstr ""
+
+#: data/resources/ui/home-page.ui:129 data/resources/ui/method-page.ui:28
+#: data/resources/ui/sites-page.ui:35
+msgid "Your Sites"
+msgstr ""
+
+#: data/resources/ui/home-page.ui:133
+msgid "Check All Sites (Ctrl+R)"
+msgstr ""
+
+#: data/resources/ui/home-page.ui:138
+msgid "_Check Now"
+msgstr ""
+
+#: data/resources/ui/home-page.ui:154
+msgid "How Sluis unblocks"
+msgstr ""
+
+#: data/resources/ui/home-page.ui:167
+msgid "Which sites"
+msgstr ""
+
+#: data/resources/ui/home-page.ui:183
+msgid "Something Not _Working?"
+msgstr ""
+
+#: data/resources/ui/method-page.ui:13
+msgid "_Use This Method"
+msgstr ""
+
+#: data/resources/ui/method-page.ui:35
+msgid "Technical details"
+msgstr ""
+
+#: data/resources/ui/method-page.ui:36
+msgid "Only needed to share or adjust this method"
+msgstr ""
+
+#: data/resources/ui/method-page.ui:40
+msgid "What it does"
+msgstr ""
+
+#: data/resources/ui/method-page.ui:50
+msgid "Copy Arguments"
+msgstr ""
+
+#: data/resources/ui/methods-page.ui:6
+msgid "Methods"
+msgstr ""
+
+#: data/resources/ui/methods-page.ui:15
+msgid "Search"
+msgstr ""
+
+#: data/resources/ui/methods-page.ui:28
+msgid "Search methods"
+msgstr ""
+
+#: data/resources/ui/methods-page.ui:38
+msgid ""
+"Different ways Sluis can get around blocks. The best one is picked for you. "
+"If you pick another, Sluis checks your sites straight away and switches back "
+"if one stops opening."
+msgstr ""
+
+#: data/resources/ui/scan-dialog.ui:28 src/setup.rs:139
+msgid "_Cancel"
+msgstr ""
+
+#: data/resources/ui/scan-dialog.ui:34
+msgid "_Start"
+msgstr ""
+
+#: data/resources/ui/scan-dialog.ui:44
+msgid ""
+"Tell Sluis which sites don’t open. It tries different ways to get around the "
+"block. Nothing changes until you say so."
+msgstr ""
+
+#: data/resources/ui/scan-dialog.ui:47
+msgid "Sites That Don’t Open"
+msgstr ""
+
+#: data/resources/ui/scan-dialog.ui:50 data/resources/ui/sites-page.ui:39
+msgid "Type a site, like discord.com"
+msgstr ""
+
+#: data/resources/ui/scan-dialog.ui:59 src/pages/scan.rs:411
+msgid "Often Blocked"
+msgstr ""
+
+#: data/resources/ui/scan-dialog.ui:60
+msgid "Tick any others you use"
+msgstr ""
+
+#: data/resources/ui/scan-dialog.ui:65
+msgid "How Long to Look"
+msgstr ""
+
+#: data/resources/ui/scan-dialog.ui:68
+msgid "_Quick"
+msgstr ""
+
+#: data/resources/ui/scan-dialog.ui:70
+msgid "Tries the most common ways · About 1 minute"
+msgstr ""
+
+#: data/resources/ui/scan-dialog.ui:82
+msgid "_Deep"
+msgstr ""
+
+#: data/resources/ui/scan-dialog.ui:84
+msgid "Tries everything · Up to 30 minutes. Use it if Quick finds nothing."
+msgstr ""
+
+#: data/resources/ui/scan-dialog.ui:115
+msgid "S_top"
+msgstr ""
+
+#: data/resources/ui/scan-dialog.ui:150
+msgid "Looking for a Way Around"
+msgstr ""
+
+#: data/resources/ui/scan-dialog.ui:179
+msgid "What Sluis Found"
+msgstr ""
+
+#: data/resources/ui/scan-dialog.ui:184
+msgid "Tried So Far"
+msgstr ""
+
+#: data/resources/ui/sites-page.ui:6
+msgid "Which Sites"
+msgstr ""
+
+#: data/resources/ui/sites-page.ui:19
+msgid "Use Sluis For"
+msgstr ""
+
+#: data/resources/ui/sites-page.ui:20
+msgid "“All sites” is safest: new sites can get blocked at any time"
+msgstr ""
+
+#: data/resources/ui/sites-page.ui:24 src/pages/home.rs:385
+msgid "All sites"
+msgstr ""
+
+#: data/resources/ui/sites-page.ui:25
+msgid "Only my sites"
+msgstr ""
+
+#: data/resources/ui/sites-page.ui:36
+msgid "Sluis checks these on the main screen"
+msgstr ""
+
+#: data/resources/ui/sites-page.ui:48
+msgid "Never Use Sluis For"
+msgstr ""
+
+#: data/resources/ui/sites-page.ui:49
+msgid ""
+"Add sites that act strangely while Sluis is on, like your bank. Sluis leaves "
+"them alone."
+msgstr ""
+
+#: data/resources/ui/sites-page.ui:52
+msgid "Type a site, like your bank’s"
+msgstr ""
+
+#: data/resources/ui/welcome-page.ui:7
+msgid "Welcome"
+msgstr ""
+
+#: data/resources/ui/welcome-page.ui:55
+msgid "Welcome to Sluis"
+msgstr ""
+
+#: data/resources/ui/welcome-page.ui:66
+msgid ""
+"Open the websites your internet provider blocks. Setting up takes about two "
+"minutes."
+msgstr ""
+
+#: data/resources/ui/welcome-page.ui:80
+msgid "Not a VPN"
+msgstr ""
+
+#: data/resources/ui/welcome-page.ui:81
+msgid ""
+"Your internet stays as fast as it is, and nothing goes through someone "
+"else’s computer"
+msgstr ""
+
+#: data/resources/ui/welcome-page.ui:92
+msgid "Finds what works for you"
+msgstr ""
+
+#: data/resources/ui/welcome-page.ui:93
+msgid "Tries different ways on your own internet and keeps the best one"
+msgstr ""
+
+#: data/resources/ui/welcome-page.ui:104
+msgid "Asks for your password once"
+msgstr ""
+
+#: data/resources/ui/welcome-page.ui:105
+msgid "Sluis needs permission to change how your computer reaches websites"
+msgstr ""
+
+#: data/resources/ui/welcome-page.ui:118
+msgid "_Get Started"
+msgstr ""
+
+#: src/application.rs:97
+msgid "Zapret engine"
+msgstr ""
+
+#. Translators: replace with your name and email, one per line
+#: src/application.rs:101
+msgid "translator-credits"
+msgstr ""
+
+#: src/checks.rs:136
+msgid "Couldn’t check"
+msgstr ""
+
+#: src/checks.rs:163
+msgid "Can’t find this site"
+msgstr ""
+
+#: src/checks.rs:164
+msgid "Can’t connect"
+msgstr ""
+
+#: src/checks.rs:165
+msgid "Took too long to answer"
+msgstr ""
+
+#. SSL connect error, receive failure, empty reply: cut mid-handshake
+#: src/checks.rs:167
+msgid "Blocked by your internet provider"
+msgstr ""
+
+#: src/checks.rs:168
+msgid "Doesn’t open"
+msgstr ""
+
+#: src/helper.rs:206
+msgid "You’re not allowed to change Zapret’s settings"
+msgstr ""
+
+#: src/helper.rs:208
+msgid "Zapret stopped with that change, so the previous settings are back"
+msgstr ""
+
+#: src/helper.rs:210
+msgid "Zapret isn’t installed"
+msgstr ""
+
+#: src/helper.rs:211 src/ui.rs:488
+msgid "That method isn’t valid"
+msgstr ""
+
+#: src/helper.rs:212
+msgid "Couldn’t download Zapret. Check your internet connection."
+msgstr ""
+
+#: src/helper.rs:213
+msgid "Zapret is up to date"
+msgstr ""
+
+#: src/helper.rs:215
+msgid "A scan is already running"
+msgstr ""
+
+#: src/helper.rs:217
+msgid "Couldn’t change Zapret’s settings"
+msgstr ""
+
+#: src/pages/home.rs:161
+msgid "Checking Zapret…"
+msgstr ""
+
+#: src/pages/home.rs:168
+msgid "Can’t Reach Zapret"
+msgstr ""
+
+#: src/pages/home.rs:170
+msgid ""
+"The helper that changes Zapret’s settings isn’t working. Reinstalling Sluis "
+"usually fixes this."
+msgstr ""
+
+#: src/pages/home.rs:177
+msgid "Unblocking Is Off"
+msgstr ""
+
+#: src/pages/home.rs:178
+msgid "Turn it on to open the sites your internet provider blocks."
+msgstr ""
+
+#: src/pages/home.rs:184
+msgid "Sluis Is On"
+msgstr ""
+
+#: src/pages/home.rs:185
+msgid "Add the sites you use, and Sluis will check that they open."
+msgstr ""
+
+#: src/pages/home.rs:186
+msgid "_Add Sites"
+msgstr ""
+
+#: src/pages/home.rs:191
+msgid "Checking Your Sites…"
+msgstr ""
+
+#: src/pages/home.rs:198
+msgid "Your Sites Are Unblocked"
+msgstr ""
+
+#: src/pages/home.rs:200
+msgid "{site} opens"
+msgstr ""
+
+#: src/pages/home.rs:201
+msgid "{sites} all open"
+msgstr ""
+
+#: src/pages/home.rs:209
+msgid "{site} Is Blocked"
+msgstr ""
+
+#: src/pages/home.rs:210
+msgid "{n} Site Is Blocked"
+msgid_plural "{n} Sites Are Blocked"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/home.rs:214
+msgid ""
+"Your internet provider found a way to block it. Another method can usually "
+"get around it."
+msgid_plural ""
+"Your internet provider found a way to block them. Another method can usually "
+"get around that."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/home.rs:218
+msgid "_Unblock It"
+msgstr ""
+
+#: src/pages/home.rs:223 src/pages/scan.rs:827
+msgid "Your Internet Provider Gives Wrong Addresses"
+msgstr ""
+
+#: src/pages/home.rs:225
+msgid ""
+"Your internet provider sends {sites} to the wrong place, so no method can "
+"open it. Turn on secure DNS (DNS over HTTPS) in your browser or in your "
+"network settings."
+msgid_plural ""
+"Your internet provider sends {sites} to the wrong place, so no method can "
+"open them. Turn on secure DNS (DNS over HTTPS) in your browser or in your "
+"network settings."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/home.rs:230
+msgid "_Check Again"
+msgstr ""
+
+#: src/pages/home.rs:266
+msgid "On · Starts by itself with your computer"
+msgstr ""
+
+#: src/pages/home.rs:268
+msgid "On"
+msgstr ""
+
+#: src/pages/home.rs:269
+msgid "Off"
+msgstr ""
+
+#: src/pages/home.rs:282
+msgid "Zapret {version} is available"
+msgstr ""
+
+#: src/pages/home.rs:297
+msgid "Add the sites you use"
+msgstr ""
+
+#: src/pages/home.rs:315 src/pages/scan.rs:882 src/pages/scan.rs:942
+msgid "Opens"
+msgstr ""
+
+#: src/pages/home.rs:319 src/pages/method.rs:51
+msgid "Blocked"
+msgstr ""
+
+#: src/pages/home.rs:325
+msgid "Turn on secure DNS"
+msgstr ""
+
+#: src/pages/home.rs:327
+msgid "Wrong address"
+msgstr ""
+
+#: src/pages/home.rs:370
+msgid "{name} · Opens your sites"
+msgstr ""
+
+#: src/pages/home.rs:373
+msgid "{name} · Some sites stay blocked"
+msgstr ""
+
+#: src/pages/home.rs:378
+msgid "Custom settings"
+msgstr ""
+
+#: src/pages/home.rs:384
+msgid "Only your sites"
+msgstr ""
+
+#: src/pages/home.rs:386
+msgid "All sites, except {n}"
+msgid_plural "All sites, except {n}"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/method.rs:32
+msgid "Opened all of your sites the last time it was used."
+msgstr ""
+
+#: src/pages/method.rs:34
+msgid "Left some of your sites blocked the last time it was used."
+msgstr ""
+
+#: src/pages/method.rs:37
+msgid ""
+"Not used with your sites yet. Sluis checks them as soon as you switch to it."
+msgstr ""
+
+#: src/pages/method.rs:48
+msgid "Opened"
+msgstr ""
+
+#: src/pages/method.rs:56
+msgid "Not checked"
+msgstr ""
+
+#: src/pages/method.rs:86
+msgid "Copied"
+msgstr ""
+
+#: src/pages/methods.rs:77
+msgid "Open Your Sites"
+msgstr ""
+
+#: src/pages/methods.rs:80
+msgid "Leave Some Sites Blocked"
+msgstr ""
+
+#: src/pages/methods.rs:84
+msgid "Not Tried Yet"
+msgstr ""
+
+#. Translators: {} is a number
+#: src/pages/methods.rs:95 src/ui.rs:474
+msgid "Method {}"
+msgstr ""
+
+#: src/pages/methods.rs:111
+msgid "Opens your site"
+msgstr ""
+
+#: src/pages/methods.rs:113
+msgid "Opens all {n} of your sites"
+msgstr ""
+
+#: src/pages/methods.rs:117
+msgid "Opened the {n} site it was tried with"
+msgid_plural "Opened all {n} sites it was tried with"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/methods.rs:125
+msgid "Opens {opened} of {total} of your sites"
+msgstr ""
+
+#: src/pages/methods.rs:130
+msgid "Add your sites to see which methods open them"
+msgstr ""
+
+#: src/pages/methods.rs:132
+msgid "Not tried with your sites yet"
+msgstr ""
+
+#: src/pages/methods.rs:162
+msgid "Fastest"
+msgstr ""
+
+#: src/pages/methods.rs:171
+msgid "In Use"
+msgstr ""
+
+#: src/pages/methods.rs:180
+msgid "Details"
+msgstr ""
+
+#: src/pages/methods.rs:223
+msgid "{n} method"
+msgid_plural "{n} methods"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/methods.rs:242
+msgid "No methods match “{query}”"
+msgstr ""
+
+#. Translators: how long a site takes to open, like "0.4 s"; {whole} and
+#. {tenth} are the seconds before and after the decimal separator
+#: src/pages/methods.rs:261
+msgid "{whole}.{tenth} s"
+msgstr ""
+
+#: src/pages/scan.rs:369 src/pages/sites.rs:123
+msgid "“{text}” isn’t a site name"
+msgstr ""
+
+#: src/pages/scan.rs:391 src/pages/sites.rs:188
+msgid "Remove {site}"
+msgstr ""
+
+#: src/pages/scan.rs:409
+msgid "Often Blocked in Türkiye"
+msgstr ""
+
+#: src/pages/scan.rs:487
+msgid "Looking for a way around the block"
+msgstr ""
+
+#: src/pages/scan.rs:508
+msgid "Couldn’t reach Zapret"
+msgstr ""
+
+#: src/pages/scan.rs:570
+msgid "The scan couldn’t start"
+msgstr ""
+
+#: src/pages/scan.rs:597
+msgid ""
+"This can take up to 30 minutes. You can close this window; Sluis tells you "
+"when it’s done."
+msgstr ""
+
+#: src/pages/scan.rs:600
+msgid "{n} way tried"
+msgid_plural "{n} ways tried"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/scan.rs:611
+msgid "This takes about a minute. You can keep using your computer."
+msgstr ""
+
+#: src/pages/scan.rs:615
+msgid "About {n} second left. You can keep using your computer."
+msgid_plural "About {n} seconds left. You can keep using your computer."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/scan.rs:624
+msgid "{done} of {total} ways tried"
+msgstr ""
+
+#: src/pages/scan.rs:641
+msgid "Checking your sites…"
+msgstr ""
+
+#: src/pages/scan.rs:652
+msgid "{sites} already opens"
+msgid_plural "{sites} already open"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/scan.rs:658
+msgid "Sluis isn’t needed for it"
+msgid_plural "Sluis isn’t needed for them"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/scan.rs:673
+msgid "{sites} is blocked by your internet provider"
+msgid_plural "{sites} are blocked by your internet provider"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/scan.rs:679
+msgid "Blocked on purpose, but Sluis can usually get around it"
+msgstr ""
+
+#: src/pages/scan.rs:691
+msgid "Your internet provider gives a wrong address for {sites}"
+msgstr ""
+
+#: src/pages/scan.rs:694
+msgid "Turning on secure DNS in your browser or system fixes this"
+msgstr ""
+
+#: src/pages/scan.rs:707
+msgid "{sites} doesn’t answer at all"
+msgid_plural "{sites} don’t answer at all"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/scan.rs:713
+msgid "It may be down, or blocked in a way Sluis can’t get around"
+msgstr ""
+
+#: src/pages/scan.rs:729
+msgid "Opened every site"
+msgstr ""
+
+#: src/pages/scan.rs:734
+msgid "Breaks {sites}"
+msgstr ""
+
+#: src/pages/scan.rs:747
+msgid "Didn’t work"
+msgstr ""
+
+#: src/pages/scan.rs:752
+msgid "Opened {n} of {total} sites"
+msgstr ""
+
+#: src/pages/scan.rs:818
+msgid "Can’t Reach {sites}"
+msgstr ""
+
+#: src/pages/scan.rs:820
+msgid ""
+"They don’t answer at all, even without the block. They may be down, or "
+"blocked in a way Sluis can’t get around."
+msgstr ""
+
+#: src/pages/scan.rs:828
+msgid ""
+"{sites} open at their real address. Turn on secure DNS (DNS over HTTPS) in "
+"your browser or system settings; Sluis isn’t needed."
+msgstr ""
+
+#: src/pages/scan.rs:835
+msgid "These Sites Already Open"
+msgstr ""
+
+#: src/pages/scan.rs:836
+msgid ""
+"Your internet provider doesn’t block {sites}, so Sluis isn’t needed for them."
+msgstr ""
+
+#: src/pages/scan.rs:853
+msgid "No Other Way Found"
+msgstr ""
+
+#: src/pages/scan.rs:855
+msgid ""
+"Sluis tried the {n} common way, and {name} is still the best. A deep scan "
+"tries everything; it can take up to 30 minutes."
+msgid_plural ""
+"Sluis tried all {n} common ways, and {name} is still the best. A deep scan "
+"tries everything; it can take up to 30 minutes."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/scan.rs:892
+msgid "Your other site"
+msgid_plural "Your {n} other sites"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/scan.rs:898
+msgid "Still works"
+msgid_plural "Still work"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/scan.rs:904
+msgid ""
+"{name}, the method Sluis already uses, opened every site, twice. It took "
+"{time}."
+msgstr ""
+
+#: src/pages/scan.rs:906
+msgid "{name} opened every site. It took {time}."
+msgstr ""
+
+#: src/pages/scan.rs:908
+msgid ""
+"{name} opened every site, twice, and your other sites still work. It took "
+"{time}."
+msgstr ""
+
+#: src/pages/scan.rs:921
+msgid ""
+"Your internet provider also gives wrong addresses for {sites}: turn on "
+"secure DNS (DNS over HTTPS) in your browser or in your network settings too, "
+"or they won’t open."
+msgstr ""
+
+#: src/pages/scan.rs:928
+msgid "Found a Way Around the Block"
+msgstr ""
+
+#: src/pages/scan.rs:953
+msgid "Still blocked"
+msgstr ""
+
+#: src/pages/scan.rs:961
+msgid "Found a Way Around for Some Sites"
+msgstr ""
+
+#: src/pages/scan.rs:962
+msgid "{name} opens {opened}, but nothing Sluis knows opens {blocked}."
+msgstr ""
+
+#: src/pages/scan.rs:971
+msgid "No Way Around Found"
+msgstr ""
+
+#: src/pages/scan.rs:972
+msgid ""
+"Sluis tried everything it knows. {sites} may be blocked in a way Sluis can’t "
+"get around."
+msgstr ""
+
+#: src/pages/scan.rs:980
+msgid "No Quick Fix Found"
+msgstr ""
+
+#: src/pages/scan.rs:982
+msgid ""
+"None of the {n} common ways opened {sites}. A deep scan tries everything; it "
+"can take up to 30 minutes."
+msgid_plural ""
+"None of the {n} common ways opened {sites}. A deep scan tries everything; it "
+"can take up to 30 minutes."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/scan.rs:1007
+msgid "_Turn It On"
+msgstr ""
+
+#: src/pages/scan.rs:1008
+msgid "_Keep Looking"
+msgstr ""
+
+#: src/pages/scan.rs:1009
+msgid "Start _Deep Scan"
+msgstr ""
+
+#: src/pages/scan.rs:1010
+msgid "_Close"
+msgstr ""
+
+#: src/pages/scan.rs:1116
+msgid "{n} second"
+msgid_plural "{n} seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/scan.rs:1119
+msgid "{n} minute"
+msgid_plural "{n} minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/pages/sites.rs:140
+msgid "Removed {site}"
+msgstr ""
+
+#: src/pages/sites.rs:141 src/ui.rs:558
+msgid "_Undo"
+msgstr ""
+
+#: src/pages/sites.rs:175
+msgid "{site} and {n} other {service} address"
+msgid_plural "{site} and {n} other {service} addresses"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/network.rs:135
+msgid "Wi‑Fi"
+msgstr ""
+
+#: src/network.rs:137
+msgid "Wired connection"
+msgstr ""
+
+#: src/setup.rs:31
+msgid "Downloading Zapret…"
+msgstr ""
+
+#: src/setup.rs:32
+msgid "Installing…"
+msgstr ""
+
+#: src/setup.rs:33
+msgid "Starting Zapret…"
+msgstr ""
+
+#: src/setup.rs:34
+msgid "Getting ready…"
+msgstr ""
+
+#: src/setup.rs:56
+msgid "Can’t reach Sluis’s helper. Reinstalling Sluis usually fixes this."
+msgstr ""
+
+#: src/setup.rs:111
+msgid "Updating Zapret…"
+msgstr ""
+
+#: src/setup.rs:118
+msgid "Zapret is updated to {version}"
+msgstr ""
+
+#: src/setup.rs:131
+msgid "Uninstall Zapret?"
+msgstr ""
+
+#: src/setup.rs:133
+msgid ""
+"Blocked sites will stop opening. This removes Zapret’s program and settings "
+"in /opt/zapret and its system service. Your sites and the methods Sluis "
+"found stay in this app."
+msgstr ""
+
+#: src/setup.rs:140
+msgid "_Uninstall"
+msgstr ""
+
+#: src/setup.rs:159
+msgid "Zapret is uninstalled"
+msgstr ""
+
+#: src/setup.rs:187
+msgid "{version} · Version {latest} is available"
+msgstr ""
+
+#: src/setup.rs:190
+msgid "{version} · Up to date"
+msgstr ""
+
+#: src/setup.rs:192
+msgid "Comes with your system, which keeps it up to date"
+msgstr ""
+
+#: src/setup.rs:193
+msgid "Installed by hand; update it the way it was installed"
+msgstr ""
+
+#: src/setup.rs:194
+msgid "Not installed"
+msgstr ""
+
+#: src/ui.rs:26
+msgid "{list} and {last}"
+msgstr ""
+
+#: src/ui.rs:199
+msgid "On {network}, Sluis uses {method}"
+msgstr ""
+
+#: src/ui.rs:458
+msgid "Zapret’s settings file is repaired"
+msgstr ""
+
+#: src/ui.rs:475
+msgid "Custom method"
+msgstr ""
+
+#: src/ui.rs:513
+msgid "Switched to {name}"
+msgstr ""
+
+#: src/ui.rs:515
+msgid "Switched to {name} · All {n} sites open"
+msgstr ""
+
+#: src/ui.rs:519
+msgid "Switched to {name} · {opened} of {n} sites open"
+msgstr ""
+
+#: src/ui.rs:527
+msgid "the previous method"
+msgstr ""
+
+#: src/ui.rs:573 src/ui.rs:642
+msgid "Switched back"
+msgstr ""
+
+#: src/ui.rs:591
+msgid ""
+"{sites} didn’t open with it, so Sluis will switch back to {method} in {n} "
+"seconds."
+msgstr ""
+
+#: src/ui.rs:597
+msgid "Keep {name}?"
+msgstr ""
+
+#: src/ui.rs:603
+msgid "_Keep Anyway"
+msgstr ""
+
+#: src/ui.rs:604
+msgid "_Switch Back"
+msgstr ""

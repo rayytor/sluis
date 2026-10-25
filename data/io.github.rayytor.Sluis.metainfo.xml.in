@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.rayytor.Sluis</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <name>Sluis</name>
+  <summary>Open websites your internet provider blocks</summary>
+  <description>
+    <p>
+      Sluis gets around the way internet providers block websites, so sites
+      like Discord or YouTube open again. It is not a VPN: your connection
+      stays as fast as it is and nothing goes through anyone else’s computer.
+    </p>
+    <p>
+      Sluis is an easy way to use Zapret, the tool by bol-van that does the
+      unblocking. It can install Zapret for you.
+    </p>
+    <ul>
+      <li>Finds a way around blocks on your own connection in about a minute</li>
+      <li>Shows at a glance whether your sites open</li>
+      <li>Switches back by itself if a change breaks a site</li>
+      <li>Remembers what works on each network</li>
+    </ul>
+  </description>
+
+  <developer id="io.github.rayytor">
+    <name translate="no">rayytor</name>
+  </developer>
+  <launchable type="desktop-id">io.github.rayytor.Sluis.desktop</launchable>
+  <translation type="gettext">sluis</translation>
+  <provides>
+    <binary>sluis</binary>
+  </provides>
+
+  <url type="homepage">https://github.com/rayytor/sluis</url>
+  <url type="bugtracker">https://github.com/rayytor/sluis/issues</url>
+  <url type="vcs-browser">https://github.com/rayytor/sluis</url>
+
+  <content_rating type="oars-1.1"/>
+  <branding>
+    <color type="primary" scheme_preference="light">#99c1f1</color>
+    <color type="primary" scheme_preference="dark">#1a5fb4</color>
+  </branding>
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <supports>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </supports>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/rayytor/sluis/main/data/screenshots/home.png</image>
+      <caption>Your sites at a glance</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/rayytor/sluis/main/data/screenshots/scan-result.png</image>
+      <caption>A way around the block, found in seconds</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/rayytor/sluis/main/data/screenshots/methods.png</image>
+      <caption>Every method, best first</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/rayytor/sluis/main/data/screenshots/sites.png</image>
+      <caption>Choose which sites Sluis touches</caption>
+    </screenshot>
+  </screenshots>
+
+  <releases>
+    <release version="0.9.0" date="2026-10-24" type="development">
+      <description>
+        <p>First preview of Sluis, the redesigned Zapret GTK. It checks whether your sites open, finds a way around a block in about a minute, switches back by itself if a change breaks a site, remembers what works on each network, and can install and update Zapret for you.</p>
+      </description>
+    </release>
+  </releases>
+</component>

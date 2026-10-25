@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Unblock Sites: which sites, looking, the answer
+     (design/screens/05-scan-sites.png, 06-scan-progress.png, 07-scan-result.png).
+     Rows are added from code (src/pages/scan.rs). -->
+<interface>
+  <object class="AdwDialog" id="dialog">
+    <property name="title" translatable="yes">Unblock Sites</property>
+    <property name="content-width">480</property>
+    <property name="content-height">680</property>
+    <property name="child">
+      <object class="AdwToastOverlay" id="toasts">
+        <property name="child">
+      <object class="AdwNavigationView" id="nav">
+
+        <!-- 1. which sites -->
+        <child>
+          <object class="AdwNavigationPage" id="sites_page">
+            <property name="title" translatable="yes">Unblock Sites</property>
+            <property name="tag">sites</property>
+            <property name="child">
+              <object class="AdwToolbarView">
+                <child type="top">
+                  <object class="AdwHeaderBar">
+                    <property name="show-end-title-buttons">False</property>
+                    <property name="show-start-title-buttons">False</property>
+                    <child type="start">
+                      <object class="GtkButton" id="cancel_button">
+                        <property name="label" translatable="yes">_Cancel</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                    <child type="end">
+                      <object class="GtkButton" id="start_button">
+                        <property name="label" translatable="yes">_Start</property>
+                        <property name="action-name">win.start-scan</property>
+                        <property name="use-underline">True</property>
+                        <style><class name="suggested-action"/></style>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <property name="content">
+                  <object class="AdwPreferencesPage">
+                    <property name="description" translatable="yes">Tell Sluis which sites don’t open. It tries different ways to get around the block. Nothing changes until you say so.</property>
+                    <child>
+                      <object class="AdwPreferencesGroup" id="chosen">
+                        <property name="title" translatable="yes">Sites That Don’t Open</property>
+                        <child>
+                          <object class="AdwEntryRow" id="add_site">
+                            <property name="title" translatable="yes">Type a site, like discord.com</property>
+                            <property name="show-apply-button">True</property>
+                            <property name="input-purpose">url</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwPreferencesGroup" id="suggested">
+                        <property name="title" translatable="yes">Often Blocked</property>
+                        <property name="description" translatable="yes">Tick any others you use</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="title" translatable="yes">How Long to Look</property>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="yes">_Quick</property>
+                            <property name="use-underline">True</property>
+                            <property name="subtitle" translatable="yes">Tries the most common ways · About 1 minute</property>
+                            <property name="activatable-widget">quick</property>
+                            <child type="prefix">
+                              <object class="GtkCheckButton" id="quick">
+                                <property name="valign">center</property>
+                                <property name="active">True</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="yes">_Deep</property>
+                            <property name="use-underline">True</property>
+                            <property name="subtitle" translatable="yes">Tries everything · Up to 30 minutes. Use it if Quick finds nothing.</property>
+                            <property name="activatable-widget">deep</property>
+                            <child type="prefix">
+                              <object class="GtkCheckButton" id="deep">
+                                <property name="valign">center</property>
+                                <property name="group">quick</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </property>
+          </object>
+        </child>
+
+        <!-- 2. looking -->
+        <child>
+          <object class="AdwNavigationPage" id="progress_page">
+            <property name="title" translatable="yes">Unblock Sites</property>
+            <property name="tag">progress</property>
+            <property name="can-pop">False</property>
+            <property name="child">
+              <object class="AdwToolbarView">
+                <child type="top">
+                  <object class="AdwHeaderBar">
+                    <child type="start">
+                      <object class="GtkButton" id="stop_button">
+                        <property name="label" translatable="yes">S_top</property>
+                        <property name="action-name">win.stop-scan</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <property name="content">
+                  <object class="GtkScrolledWindow">
+                    <property name="hscrollbar-policy">never</property>
+                    <property name="child">
+                      <object class="AdwClamp">
+                        <property name="maximum-size">520</property>
+                        <property name="child">
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">24</property>
+                            <property name="margin-top">24</property>
+                            <property name="margin-bottom">24</property>
+                            <property name="margin-start">12</property>
+                            <property name="margin-end">12</property>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="orientation">vertical</property>
+                                <property name="spacing">6</property>
+                                <child>
+                                  <object class="AdwSpinner">
+                                    <property name="width-request">64</property>
+                                    <property name="height-request">64</property>
+                                    <property name="halign">center</property>
+                                    <property name="margin-bottom">12</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="progress_title">
+                                    <property name="label" translatable="yes">Looking for a Way Around</property>
+                                    <property name="wrap">True</property>
+                                    <property name="justify">center</property>
+                                    <style><class name="title-1"/></style>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="progress_detail">
+                                    <property name="wrap">True</property>
+                                    <property name="justify">center</property>
+                                    <style><class name="dim-label"/></style>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkProgressBar" id="progress_bar">
+                                    <property name="margin-top">12</property>
+                                    <property name="margin-start">36</property>
+                                    <property name="margin-end">36</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="progress_count">
+                                    <style><class name="dim-label"/><class name="caption"/></style>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwPreferencesGroup" id="found_group">
+                                <property name="title" translatable="yes">What Sluis Found</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwPreferencesGroup" id="tried_group">
+                                <property name="title" translatable="yes">Tried So Far</property>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                  </object>
+                </property>
+              </object>
+            </property>
+          </object>
+        </child>
+
+        <!-- 3. the answer -->
+        <child>
+          <object class="AdwNavigationPage" id="result_page">
+            <property name="title" translatable="yes">Unblock Sites</property>
+            <property name="tag">result</property>
+            <property name="can-pop">False</property>
+            <property name="child">
+              <object class="AdwToolbarView">
+                <child type="top">
+                  <object class="AdwHeaderBar"/>
+                </child>
+                <property name="content">
+                  <object class="GtkScrolledWindow">
+                    <property name="hscrollbar-policy">never</property>
+                    <property name="child">
+                      <object class="AdwClamp">
+                        <property name="maximum-size">520</property>
+                        <property name="child">
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">24</property>
+                            <property name="valign">center</property>
+                            <property name="margin-top">24</property>
+                            <property name="margin-bottom">24</property>
+                            <property name="margin-start">12</property>
+                            <property name="margin-end">12</property>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="orientation">vertical</property>
+                                <property name="spacing">6</property>
+                                <child>
+                                  <object class="GtkImage" id="result_icon">
+                                    <property name="pixel-size">64</property>
+                                    <property name="halign">center</property>
+                                    <property name="margin-bottom">12</property>
+                                    <property name="accessible-role">presentation</property>
+                                    <style><class name="hero-icon"/></style>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="result_title">
+                                    <property name="wrap">True</property>
+                                    <property name="justify">center</property>
+                                    <style><class name="title-1"/></style>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="result_description">
+                                    <property name="wrap">True</property>
+                                    <property name="justify">center</property>
+                                    <property name="max-width-chars">44</property>
+                                    <style><class name="dim-label"/></style>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwPreferencesGroup" id="result_group"/>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="orientation">vertical</property>
+                                <property name="spacing">12</property>
+                                <property name="halign">center</property>
+                                <child>
+                                  <object class="GtkButton" id="result_primary">
+                                    <property name="use-underline">True</property>
+                                    <style><class name="pill"/><class name="suggested-action"/></style>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="result_secondary">
+                                    <property name="use-underline">True</property>
+                                    <style><class name="pill"/></style>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                  </object>
+                </property>
+              </object>
+            </property>
+          </object>
+        </child>
+      </object>
+        </property>
+      </object>
+    </property>
+  </object>
+</interface>

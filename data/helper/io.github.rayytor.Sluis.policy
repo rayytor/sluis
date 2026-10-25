@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+  "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
+<policyconfig>
+  <vendor>Sluis</vendor>
+  <vendor_url>https://github.com/rayytor/sluis</vendor_url>
+  <icon_name>io.github.rayytor.Sluis</icon_name>
+
+  <action id="io.github.rayytor.Sluis.change-settings">
+    <description>Change how Zapret unblocks sites</description>
+    <message>Authentication is required to change how Zapret unblocks sites</message>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+  </action>
+
+  <action id="io.github.rayytor.Sluis.start-stop">
+    <description>Turn Zapret on or off</description>
+    <message>Authentication is required to turn Zapret on or off</message>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+  </action>
+
+  <action id="io.github.rayytor.Sluis.scan">
+    <description>Test ways to unblock sites</description>
+    <message>Authentication is required to test ways to unblock sites</message>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+  </action>
+
+  <action id="io.github.rayytor.Sluis.manage">
+    <description>Install, update or remove Zapret</description>
+    <message>Authentication is required to install, update or remove Zapret</message>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+  </action>
+</policyconfig>

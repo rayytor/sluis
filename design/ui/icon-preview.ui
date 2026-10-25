@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="AdwApplicationWindow" id="window">
+    <property name="content">
+      <object class="GtkBox">
+        <property name="spacing">48</property>
+        <property name="halign">center</property>
+        <property name="valign">center</property>
+        <child><object class="GtkImage"><property name="icon-name">sluis-chained-symbolic</property><property name="pixel-size">220</property></object></child>
+        <child><object class="GtkImage"><property name="icon-name">sluis-freed-symbolic</property><property name="pixel-size">220</property></object></child>
+        <child><object class="GtkImage"><property name="icon-name">sluis-chained-symbolic</property><property name="pixel-size">56</property><property name="valign">center</property><style><class name="hero-icon"/><class name="bad"/></style></object></child>
+        <child><object class="GtkImage"><property name="icon-name">sluis-freed-symbolic</property><property name="pixel-size">56</property><property name="valign">center</property><style><class name="hero-icon"/><class name="ok"/></style></object></child>
+        <child><object class="GtkImage"><property name="icon-name">sluis-freed-symbolic</property><property name="pixel-size">16</property><property name="valign">center</property></object></child>
+      </object>
+    </property>
+  </object>
+</interface>

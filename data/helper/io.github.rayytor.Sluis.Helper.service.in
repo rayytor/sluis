@@ -1,0 +1,5 @@
+[D-BUS Service]
+Name=io.github.rayytor.Sluis.Helper
+Exec=@LIBEXECDIR@/sluis-helper
+User=root
+SystemdService=sluis-helper.service

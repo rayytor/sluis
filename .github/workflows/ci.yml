@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    container: registry.fedoraproject.org/fedora:44
+    steps:
+      - name: Install dependencies
+        run: >
+          dnf -y install git cargo rust clippy rustfmt
+          gtk4-devel libadwaita-devel glib2-devel gettext-devel
+          meson desktop-file-utils appstream libxml2
+      - uses: actions/checkout@v4
+      - name: Checks
+        run: tools/check.sh
+      - name: Meson build and tests
+        run: |
+          meson setup _build
+          meson compile -C _build
+          meson test -C _build --print-errorlogs

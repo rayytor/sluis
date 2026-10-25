@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Switch rows are named after their GSettings key (see src/preferences.rs).
+     Rows that need the helper (ports, DNS, uninstall) arrive with M2/M6. -->
+<interface domain="sluis">
+  <object class="AdwPreferencesDialog" id="dialog">
+    <property name="search-enabled">True</property>
+    <child>
+      <object class="AdwPreferencesPage">
+        <property name="name">general</property>
+        <property name="title" translatable="yes">General</property>
+        <property name="icon-name">emblem-system-symbolic</property>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Startup</property>
+            <child>
+              <object class="AdwSwitchRow" id="start-at-login">
+                <property name="title" translatable="yes">Start with the computer</property>
+                <property name="subtitle" translatable="yes">Sites open as soon as you log in, even if this window is closed</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Networks</property>
+            <child>
+              <object class="AdwSwitchRow" id="remember-networks">
+                <property name="title" translatable="yes">Remember each Wi‑Fi network</property>
+                <property name="subtitle" translatable="yes">Uses the right method by itself at home, at work or on mobile data</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="notify-when-blocked">
+                <property name="title" translatable="yes">Tell me when a site stops opening</property>
+                <property name="subtitle" translatable="yes">Checks your sites quietly every hour</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Updates</property>
+            <child>
+              <object class="AdwSwitchRow" id="update-methods">
+                <property name="title" translatable="yes">Get new methods automatically</property>
+                <property name="subtitle" translatable="yes">Downloads methods that work well in your country. Nothing about you is sent.</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesPage">
+        <property name="name">advanced</property>
+        <property name="title" translatable="yes">Advanced</property>
+        <property name="icon-name">preferences-system-network-symbolic</property>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Connections</property>
+            <child>
+              <object class="AdwSwitchRow" id="unblock-calls">
+                <property name="title" translatable="yes">Unblock voice and video calls</property>
+                <property name="subtitle" translatable="yes">Needed for Discord voice chat with some internet providers</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="ipv6">
+                <property name="title" translatable="yes">IPv6</property>
+                <property name="subtitle" translatable="yes">Leave on unless someone tells you otherwise</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">For Experts</property>
+            <child>
+              <object class="AdwSwitchRow" id="show-technical-details">
+                <property name="title" translatable="yes">Show technical details in lists</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Sluis</property>
+            <child>
+              <object class="AdwActionRow" id="zapret_version">
+                <property name="title" translatable="yes">Version</property>
+                <child type="suffix">
+                  <object class="GtkButton" id="update_button">
+                    <property name="label" translatable="yes">_Update</property>
+                    <property name="use-underline">True</property>
+                    <property name="valign">center</property>
+                    <property name="visible">False</property>
+                    <style><class name="suggested-action"/></style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesGroup" id="remove_group">
+            <property name="visible">False</property>
+            <child>
+              <object class="AdwButtonRow" id="uninstall">
+                <property name="title" translatable="yes">_Uninstall Zapret…</property>
+                <property name="use-underline">True</property>
+                <style><class name="destructive-action"/></style>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

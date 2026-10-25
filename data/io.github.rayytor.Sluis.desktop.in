@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Sluis
+Comment=Open websites your internet provider blocks
+Exec=sluis
+Icon=io.github.rayytor.Sluis
+Terminal=false
+Type=Application
+Categories=GTK;GNOME;Network;
+# Translators: search terms to find this app. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+Keywords=unblock;blocked;censorship;dpi;discord;youtube;sites;
+StartupNotify=true

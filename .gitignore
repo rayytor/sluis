@@ -1,0 +1,6 @@
+/target
+/_build
+/design/tools/render
+/design/screens/_*.png
+__pycache__/
+/design/ui/sheet.ui

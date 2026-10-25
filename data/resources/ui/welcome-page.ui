@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- First run, when zapret is not installed (design/screens/10-welcome.png).
+     Get Started installs zapret, shows its progress here, then opens the
+     scan (src/ui.rs, get_started). -->
+<interface domain="sluis">
+  <object class="AdwNavigationPage" id="page">
+    <property name="title" translatable="yes">Welcome</property>
+    <property name="tag">welcome</property>
+    <property name="child">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar">
+            <property name="title-widget">
+              <object class="AdwWindowTitle"/>
+            </property>
+            <child type="end">
+              <object class="GtkMenuButton" id="menu_button">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="primary">True</property>
+                <property name="tooltip-text" translatable="yes">Main Menu</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <property name="content">
+          <object class="GtkScrolledWindow">
+            <property name="hscrollbar-policy">never</property>
+            <property name="child">
+              <object class="AdwClamp">
+                <property name="maximum-size">440</property>
+                <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+                    <property name="spacing">6</property>
+                    <property name="valign">center</property>
+                    <property name="margin-top">12</property>
+                    <property name="margin-bottom">24</property>
+                    <property name="margin-start">12</property>
+                    <property name="margin-end">12</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">sluis-freed-symbolic</property>
+                        <property name="pixel-size">64</property>
+                        <property name="halign">center</property>
+                        <property name="margin-bottom">12</property>
+                        <property name="accessible-role">presentation</property>
+                        <style>
+                          <class name="hero-icon"/>
+                          <class name="busy"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label" translatable="yes">Welcome to Sluis</property>
+                        <property name="wrap">True</property>
+                        <property name="justify">center</property>
+                        <property name="accessible-role">heading</property>
+                        <style>
+                          <class name="title-1"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label" translatable="yes">Open the websites your internet provider blocks. Setting up takes about two minutes.</property>
+                        <property name="wrap">True</property>
+                        <property name="justify">center</property>
+                        <property name="max-width-chars">40</property>
+                        <style>
+                          <class name="dim-label"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="margin-top">24</property>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="yes">Not a VPN</property>
+                            <property name="subtitle" translatable="yes">Your internet stays as fast as it is, and nothing goes through someone else’s computer</property>
+                            <child type="prefix">
+                              <object class="GtkImage">
+                                <property name="accessible-role">presentation</property>
+                                <property name="icon-name">network-vpn-disabled-symbolic</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="yes">Finds what works for you</property>
+                            <property name="subtitle" translatable="yes">Tries different ways on your own internet and keeps the best one</property>
+                            <child type="prefix">
+                              <object class="GtkImage">
+                                <property name="accessible-role">presentation</property>
+                                <property name="icon-name">system-search-symbolic</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="yes">Asks for your password once</property>
+                            <property name="subtitle" translatable="yes">Sluis needs permission to change how your computer reaches websites</property>
+                            <child type="prefix">
+                              <object class="GtkImage">
+                                <property name="accessible-role">presentation</property>
+                                <property name="icon-name">dialog-password-symbolic</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="start_button">
+                        <property name="label" translatable="yes">_Get Started</property>
+                        <property name="use-underline">True</property>
+                        <property name="action-name">win.get-started</property>
+                        <property name="halign">center</property>
+                        <property name="margin-top">24</property>
+                        <style>
+                          <class name="pill"/>
+                          <class name="suggested-action"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkBox" id="progress">
+                        <property name="visible">False</property>
+                        <property name="spacing">12</property>
+                        <property name="halign">center</property>
+                        <property name="margin-top">24</property>
+                        <child>
+                          <object class="AdwSpinner"/>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="progress_label">
+                            <property name="wrap">True</property>
+                            <style><class name="dim-label"/></style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </property>
+          </object>
+        </property>
+      </object>
+    </property>
+  </object>
+</interface>

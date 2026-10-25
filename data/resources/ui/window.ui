@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface domain="sluis">
+  <template class="SluisWindow" parent="AdwApplicationWindow">
+    <property name="title" translatable="yes">Sluis</property>
+    <property name="width-request">360</property>
+    <property name="height-request">294</property>
+    <property name="content">
+      <object class="AdwToastOverlay" id="toasts">
+        <property name="child">
+          <object class="AdwNavigationView" id="nav"/>
+        </property>
+      </object>
+    </property>
+  </template>
+</interface>

@@ -1,0 +1,34 @@
+[Unit]
+Description=Sluis helper (applies Sluis's settings to Zapret)
+Documentation=https://github.com/rayytor/sluis
+
+[Service]
+Type=dbus
+BusName=io.github.rayytor.Sluis.Helper
+ExecStart=@LIBEXECDIR@/sluis-helper
+# It writes zapret's config and asks systemd to restart zapret; for quick
+# scans it adds a temporary nftables table and runs nfqws and curl, and
+# for thorough scans zapret's blockcheck.sh with zapret paused.
+ProtectSystem=strict
+# /opt for installing zapret beside an old copy; its unit goes to /etc
+ReadWritePaths=/opt /etc/systemd/system
+# marks zapret as paused by a Thorough Scan; kept if the helper crashes
+RuntimeDirectory=sluis-helper
+RuntimeDirectoryPreserve=yes
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+NoNewPrivileges=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+ProtectHostname=yes
+RestrictAddressFamilies=AF_UNIX AF_NETLINK AF_INET AF_INET6
+RestrictNamespaces=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+SystemCallArchitectures=native

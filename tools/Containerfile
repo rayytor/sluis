@@ -1,0 +1,9 @@
+# Build environment for tools/container.sh: everything CI installs.
+# nocaps: torOS's kernel has no ext4 security xattrs, so rpm cannot set file
+# capabilities (gstreamer's gst-ptp-helper has one); nothing here needs them.
+FROM registry.fedoraproject.org/fedora:44
+RUN dnf5 install -y --setopt=install_weak_deps=False --setopt=tsflags=nodocs,nocaps \
+        --setopt=keepcache=True \
+        cargo rust clippy rustfmt \
+        gtk4-devel libadwaita-devel glib2-devel gettext-devel \
+        meson desktop-file-utils appstream libxml2

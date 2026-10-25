@@ -1,0 +1,23 @@
+{
+  "comment": "Methods the quick scan tries, most likely first. {ttl} expands to TTL 1 to 12 at that place. Every line must parse with sluis-core (tests check it).",
+  "methods": [
+    "--dpi-desync=fake --dpi-desync-ttl={ttl}",
+    "--dpi-desync=fake --dpi-desync-fooling=ts",
+    "--dpi-desync=fake --dpi-desync-fooling=md5sig",
+    "--dpi-desync=fake --dpi-desync-fooling=badseq",
+    "--dpi-desync=fake --dpi-desync-fooling=datanoack",
+    "--dpi-desync=fake --dpi-desync-autottl",
+    "--dpi-desync=fake,multisplit --dpi-desync-split-pos=1 --dpi-desync-fooling=ts",
+    "--dpi-desync=fake,multidisorder --dpi-desync-split-pos=1,midsld --dpi-desync-fooling=md5sig",
+    "--dpi-desync=fakedsplit --dpi-desync-split-pos=1 --dpi-desync-fooling=badseq",
+    "--dpi-desync=fakeddisorder --dpi-desync-split-pos=1 --dpi-desync-fooling=badseq",
+    "--dpi-desync=hostfakesplit --dpi-desync-fooling=ts",
+    "--dpi-desync=multisplit --dpi-desync-split-pos=1",
+    "--dpi-desync=multisplit --dpi-desync-split-pos=1,midsld",
+    "--dpi-desync=multidisorder --dpi-desync-split-pos=1,midsld",
+    "--dpi-desync=syndata",
+    "--dpi-desync=fake --dpi-desync-fake-tls-mod=rnd,dupsid,sni=www.google.com --dpi-desync-fooling=ts",
+    "--dpi-desync=fake --dpi-desync-repeats=6 --dpi-desync-fooling=md5sig"
+  ],
+  "controls": ["www.wikipedia.org", "www.gnome.org"]
+}

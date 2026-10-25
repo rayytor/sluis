@@ -1,0 +1,27 @@
+# Files with translatable strings
+data/io.github.rayytor.Sluis.desktop.in
+data/io.github.rayytor.Sluis.metainfo.xml.in
+data/io.github.rayytor.Sluis.gschema.xml
+data/resources/shortcuts-dialog.ui
+data/resources/ui/preferences-dialog.ui
+data/resources/gtk/menus.ui
+data/resources/ui/home-page.ui
+data/resources/ui/method-page.ui
+data/resources/ui/methods-page.ui
+data/resources/ui/scan-dialog.ui
+data/resources/ui/sites-page.ui
+data/resources/ui/welcome-page.ui
+data/resources/ui/window.ui
+src/application.rs
+src/checks.rs
+src/helper.rs
+src/pages/home.rs
+src/pages/method.rs
+src/pages/methods.rs
+src/pages/scan.rs
+src/pages/sites.rs
+src/network.rs
+src/setup.rs
+src/ui.rs
+src/main.rs
+src/window.rs

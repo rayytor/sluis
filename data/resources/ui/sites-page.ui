@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Which sites (design/screens/08-sites.png); the lists are built by
+     src/pages/sites.rs. -->
+<interface domain="sluis">
+  <object class="AdwNavigationPage" id="page">
+    <property name="title" translatable="yes">Which Sites</property>
+    <property name="tag">sites</property>
+    <property name="child">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar"/>
+        </child>
+        <property name="content">
+          <object class="AdwPreferencesPage">
+            <child>
+              <object class="AdwPreferencesGroup">
+                <child>
+                  <object class="AdwComboRow" id="mode">
+                    <property name="title" translatable="yes">Use Sluis For</property>
+                    <property name="subtitle" translatable="yes">“All sites” is safest: new sites can get blocked at any time</property>
+                    <property name="model">
+                      <object class="GtkStringList">
+                        <items>
+                          <item translatable="yes">All sites</item>
+                          <item translatable="yes">Only my sites</item>
+                        </items>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwPreferencesGroup" id="mine">
+                <property name="title" translatable="yes">Your Sites</property>
+                <property name="description" translatable="yes">Sluis checks these on the main screen</property>
+                <child>
+                  <object class="AdwEntryRow" id="add_mine">
+                    <property name="title" translatable="yes">Type a site, like discord.com</property>
+                    <property name="show-apply-button">True</property>
+                    <property name="input-purpose">url</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwPreferencesGroup" id="excluded">
+                <property name="title" translatable="yes">Never Use Sluis For</property>
+                <property name="description" translatable="yes">Add sites that act strangely while Sluis is on, like your bank. Sluis leaves them alone.</property>
+                <child>
+                  <object class="AdwEntryRow" id="add_excluded">
+                    <property name="title" translatable="yes">Type a site, like your bank’s</property>
+                    <property name="show-apply-button">True</property>
+                    <property name="input-purpose">url</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </property>
+      </object>
+    </property>
+  </object>
+</interface>

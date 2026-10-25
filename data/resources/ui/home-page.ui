@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Home (design/screens/01-home.png, 02-home-problem.png). The hero, the
+     site rows and the summaries are filled in by src/pages/home.rs. -->
+<interface domain="sluis">
+  <object class="AdwNavigationPage" id="page">
+    <property name="title" translatable="yes">Sluis</property>
+    <property name="tag">home</property>
+    <property name="child">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar">
+            <property name="title-widget">
+              <object class="AdwWindowTitle" id="title">
+                <property name="title" translatable="yes">Sluis</property>
+              </object>
+            </property>
+            <child type="end">
+              <object class="GtkMenuButton" id="menu_button">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="primary">True</property>
+                <property name="tooltip-text" translatable="yes">Main Menu</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child type="top">
+          <object class="AdwBanner" id="banner">
+            <property name="title" translatable="yes">Zapret’s settings file is damaged</property>
+            <property name="button-label" translatable="yes">_Repair</property>
+          </object>
+        </child>
+        <property name="content">
+          <object class="GtkScrolledWindow">
+            <property name="hscrollbar-policy">never</property>
+            <property name="child">
+              <object class="AdwClamp">
+                <property name="maximum-size">520</property>
+                <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+                    <property name="spacing">24</property>
+                    <property name="margin-top">24</property>
+                    <property name="margin-bottom">24</property>
+                    <property name="margin-start">12</property>
+                    <property name="margin-end">12</property>
+
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">6</property>
+                        <child>
+                          <object class="GtkStack" id="hero_icon_stack">
+                            <property name="halign">center</property>
+                            <property name="margin-bottom">12</property>
+                            <child>
+                              <object class="GtkStackPage">
+                                <property name="name">icon</property>
+                                <property name="child">
+                                  <object class="GtkImage" id="hero_icon">
+                                    <property name="icon-name">sluis-freed-symbolic</property>
+                                    <property name="pixel-size">64</property>
+                                    <property name="accessible-role">presentation</property>
+                                    <style>
+                                      <class name="hero-icon"/>
+                                    </style>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkStackPage">
+                                <property name="name">spinner</property>
+                                <property name="child">
+                                  <object class="AdwSpinner">
+                                    <property name="width-request">112</property>
+                                    <property name="height-request">112</property>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="hero_title">
+                            <property name="wrap">True</property>
+                            <property name="justify">center</property>
+                            <property name="accessible-role">heading</property>
+                            <style>
+                              <class name="title-1"/>
+                            </style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="hero_description">
+                            <property name="wrap">True</property>
+                            <property name="justify">center</property>
+                            <property name="max-width-chars">44</property>
+                            <style>
+                              <class name="dim-label"/>
+                            </style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="hero_button">
+                            <property name="halign">center</property>
+                            <property name="margin-top">18</property>
+                            <property name="use-underline">True</property>
+                            <style>
+                              <class name="pill"/>
+                              <class name="suggested-action"/>
+                            </style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <child>
+                          <object class="AdwSwitchRow" id="unblocking">
+                            <property name="title" translatable="yes">Unblocking</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="AdwPreferencesGroup" id="sites_group">
+                        <property name="title" translatable="yes">Your Sites</property>
+                        <property name="header-suffix">
+                          <object class="GtkButton" id="check_button">
+                            <property name="valign">center</property>
+                            <property name="tooltip-text" translatable="yes">Check All Sites (Ctrl+R)</property>
+                            <property name="action-name">win.check-sites</property>
+                            <property name="child">
+                              <object class="AdwButtonContent">
+                                <property name="icon-name">view-refresh-symbolic</property>
+                                <property name="label" translatable="yes">_Check Now</property>
+                                <property name="use-underline">True</property>
+                              </object>
+                            </property>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                          </object>
+                        </property>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <child>
+                          <object class="AdwActionRow" id="method_row">
+                            <property name="title" translatable="yes">How Sluis unblocks</property>
+                            <property name="activatable">True</property>
+                            <property name="action-name">win.show-methods</property>
+                            <child type="suffix">
+                              <object class="GtkImage">
+                                <property name="icon-name">go-next-symbolic</property>
+                                <property name="accessible-role">presentation</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow" id="sites_row">
+                            <property name="title" translatable="yes">Which sites</property>
+                            <property name="activatable">True</property>
+                            <property name="action-name">win.show-sites</property>
+                            <child type="suffix">
+                              <object class="GtkImage">
+                                <property name="icon-name">go-next-symbolic</property>
+                                <property name="accessible-role">presentation</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="GtkButton" id="help_button">
+                        <property name="label" translatable="yes">Something Not _Working?</property>
+                        <property name="use-underline">True</property>
+                        <property name="halign">center</property>
+                        <property name="action-name">win.scan</property>
+                        <style>
+                          <class name="pill"/>
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </property>
+          </object>
+        </property>
+      </object>
+    </property>
+  </object>
+</interface>

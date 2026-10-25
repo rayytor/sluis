@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="sluis">
+  <schema id="io.github.rayytor.Sluis" path="/io/github/rayytor/Sluis/">
+    <key name="window-width" type="i">
+      <default>520</default>
+    </key>
+    <key name="window-height" type="i">
+      <default>760</default>
+    </key>
+    <key name="window-maximized" type="b">
+      <default>false</default>
+    </key>
+
+    <key name="sites" type="as">
+      <default>[]</default>
+      <summary>The user’s sites: checked on the home page, used when looking for a method</summary>
+    </key>
+    <key name="sites-mode" type="s">
+      <choices>
+        <choice value="all"/>
+        <choice value="mine"/>
+      </choices>
+      <default>"all"</default>
+      <summary>Use Sluis for all sites or only for the user’s sites</summary>
+    </key>
+    <key name="excluded-sites" type="as">
+      <default>[]</default>
+      <summary>Sites Sluis never touches</summary>
+    </key>
+
+    <key name="start-at-login" type="b">
+      <default>true</default>
+      <summary>Start with the computer</summary>
+    </key>
+    <key name="remember-networks" type="b">
+      <default>true</default>
+      <summary>Remember a method for each network</summary>
+    </key>
+    <key name="notify-when-blocked" type="b">
+      <default>true</default>
+      <summary>Notify when one of your sites stops opening</summary>
+    </key>
+    <key name="update-methods" type="b">
+      <default>true</default>
+      <summary>Download new unblocking methods automatically</summary>
+    </key>
+    <key name="unblock-calls" type="b">
+      <default>true</default>
+      <summary>Unblock voice and video calls (UDP and QUIC)</summary>
+    </key>
+    <key name="ipv6" type="b">
+      <default>true</default>
+      <summary>Unblock IPv6 connections too</summary>
+    </key>
+    <key name="show-technical-details" type="b">
+      <default>false</default>
+      <summary>Show nfqws arguments in lists</summary>
+    </key>
+  </schema>
+</schemalist>

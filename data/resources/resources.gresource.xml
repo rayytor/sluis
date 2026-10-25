@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Paths resolve against data/resources first, then data/ (see build.rs). -->
+<gresources>
+  <gresource prefix="/io/github/rayytor/Sluis">
+    <file preprocess="xml-stripblanks">ui/window.ui</file>
+    <file preprocess="xml-stripblanks">ui/welcome-page.ui</file>
+    <file preprocess="xml-stripblanks">ui/home-page.ui</file>
+    <file preprocess="xml-stripblanks">ui/methods-page.ui</file>
+    <file preprocess="xml-stripblanks">ui/method-page.ui</file>
+    <file preprocess="xml-stripblanks">ui/sites-page.ui</file>
+    <file preprocess="xml-stripblanks">ui/scan-dialog.ui</file>
+    <file preprocess="xml-stripblanks">gtk/menus.ui</file>
+    <file preprocess="xml-stripblanks">ui/preferences-dialog.ui</file>
+    <file preprocess="xml-stripblanks">shortcuts-dialog.ui</file>
+    <file>style.css</file>
+    <file alias="metainfo.xml" preprocess="xml-stripblanks">io.github.rayytor.Sluis.metainfo.xml.in</file>
+    <file preprocess="xml-stripblanks">icons/scalable/status/sluis-chained-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/status/sluis-freed-symbolic.svg</file>
+    <!-- for `cargo run`; installed builds also get them in hicolor -->
+    <file alias="icons/scalable/apps/io.github.rayytor.Sluis.svg" preprocess="xml-stripblanks">icons/hicolor/scalable/apps/io.github.rayytor.Sluis.svg</file>
+    <file alias="icons/symbolic/apps/io.github.rayytor.Sluis-symbolic.svg" preprocess="xml-stripblanks">icons/hicolor/symbolic/apps/io.github.rayytor.Sluis-symbolic.svg</file>
+  </gresource>
+</gresources>

@@ -1,0 +1,2 @@
+option('wheel_rule', type: 'boolean', value: false,
+  description: 'Let wheel users in the active local session change Zapret without a password (for desktops with no polkit agent, like torOS)')

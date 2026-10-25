@@ -1,0 +1,33 @@
+/* The only custom CSS: hero icon circle and a small tag. Colors come from
+ * libadwaita variables so light, dark, high contrast and accents still work. */
+
+.hero-icon {
+  border-radius: 999px;
+  padding: 24px;
+  background: color-mix(in srgb, currentColor 8%, transparent);
+}
+.hero-icon.ok {
+  color: var(--success-color);
+  background: color-mix(in srgb, var(--success-bg-color) 18%, transparent);
+}
+.hero-icon.bad {
+  color: var(--warning-color);
+  background: color-mix(in srgb, var(--warning-bg-color) 20%, transparent);
+}
+.hero-icon.busy {
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-bg-color) 16%, transparent);
+}
+
+.tag {
+  border-radius: 999px;
+  padding: 2px 9px;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-bg-color) 18%, transparent);
+}
+
+/* contact sheet only */
+.sheet { background: var(--window-bg-color); }
+.sheet-caption { font-weight: 700; }

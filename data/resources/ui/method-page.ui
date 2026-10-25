@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- One method (design/screens/04-strategy-details.png); filled in by
+     src/pages/method.rs. -->
+<interface domain="sluis">
+  <object class="AdwNavigationPage" id="page">
+    <property name="child">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar"/>
+        </child>
+        <child type="bottom">
+          <object class="GtkButton" id="use_button">
+            <property name="label" translatable="yes">_Use This Method</property>
+            <property name="use-underline">True</property>
+            <property name="halign">center</property>
+            <property name="margin-top">12</property>
+            <property name="margin-bottom">12</property>
+            <style>
+              <class name="pill"/>
+              <class name="suggested-action"/>
+            </style>
+          </object>
+        </child>
+        <property name="content">
+          <object class="AdwPreferencesPage" id="preferences">
+            <child>
+              <object class="AdwPreferencesGroup" id="results">
+                <property name="title" translatable="yes">Your Sites</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwPreferencesGroup">
+                <child>
+                  <object class="AdwExpanderRow" id="technical">
+                    <property name="title" translatable="yes">Technical details</property>
+                    <property name="subtitle" translatable="yes">Only needed to share or adjust this method</property>
+                    <child>
+                      <object class="AdwActionRow" id="name_row">
+                        <property name="subtitle-selectable">True</property>
+                        <property name="title" translatable="yes">What it does</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwActionRow" id="args_row">
+                        <property name="title-selectable">True</property>
+                        <child type="suffix">
+                          <object class="GtkButton" id="copy_button">
+                            <property name="icon-name">edit-copy-symbolic</property>
+                            <property name="valign">center</property>
+                            <property name="tooltip-text" translatable="yes">Copy Arguments</property>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                          </object>
+                        </child>
+                        <style>
+                          <class name="monospace"/>
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </property>
+      </object>
+    </property>
+  </object>
+</interface>

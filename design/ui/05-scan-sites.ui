@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Quick Scan, step 1: which sites. Prefilled from the user's list, with
+     one-click suggestions for the region; paste a full link and it's cleaned. -->
+<interface>
+  <object class="AdwApplicationWindow" id="window">
+    <property name="title">Unblock Sites</property>
+    <property name="content">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar">
+            <property name="show-end-title-buttons">False</property>
+            <property name="show-start-title-buttons">False</property>
+            <child type="start">
+              <object class="GtkButton"><property name="label">Cancel</property></object>
+            </child>
+            <property name="title-widget">
+              <object class="AdwWindowTitle">
+                <property name="title">Unblock Sites</property>
+              </object>
+            </property>
+            <child type="end">
+              <object class="GtkButton">
+                <property name="label">Start</property>
+                <style><class name="suggested-action"/></style>
+              </object>
+            </child>
+          </object>
+        </child>
+        <property name="content">
+          <object class="AdwPreferencesPage">
+            <property name="description">Tell Zapret which sites don’t open. It tries different ways to get around the block. Nothing changes until you say so.</property>
+            <child>
+              <object class="AdwPreferencesGroup">
+                <property name="title">Sites That Don’t Open</property>
+                <child>
+                  <object class="AdwEntryRow">
+                    <property name="title">Type a site, like discord.com</property>
+                    <property name="show-apply-button">True</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title">Discord</property>
+                    <property name="subtitle">discord.com</property>
+                    <child type="suffix"><object class="GtkButton"><property name="icon-name">user-trash-symbolic</property><property name="valign">center</property><property name="tooltip-text">Remove</property><style><class name="flat"/></style></object></child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title">Roblox</property>
+                    <property name="subtitle">roblox.com</property>
+                    <child type="suffix"><object class="GtkButton"><property name="icon-name">user-trash-symbolic</property><property name="valign">center</property><property name="tooltip-text">Remove</property><style><class name="flat"/></style></object></child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwPreferencesGroup">
+                <property name="title">Often Blocked in Türkiye</property>
+                <property name="description">Tick any others you use</property>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title">YouTube</property>
+                    <property name="activatable-widget">s1</property>
+                    <child type="prefix"><object class="GtkCheckButton" id="s1"><property name="valign">center</property><property name="active">True</property></object></child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title">Wattpad</property>
+                    <property name="activatable-widget">s2</property>
+                    <child type="prefix"><object class="GtkCheckButton" id="s2"><property name="valign">center</property><property name="active">True</property></object></child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title">Imgur</property>
+                    <property name="activatable-widget">s3</property>
+                    <child type="prefix"><object class="GtkCheckButton" id="s3"><property name="valign">center</property></object></child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwPreferencesGroup">
+                <property name="title">How Long to Look</property>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title">Quick</property>
+                    <property name="subtitle">Tries the most common ways · About 1 minute</property>
+                    <property name="activatable-widget">q1</property>
+                    <child type="prefix"><object class="GtkCheckButton" id="q1"><property name="valign">center</property><property name="active">True</property></object></child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title">Deep</property>
+                    <property name="subtitle">Tries everything · Up to 30 minutes. Use it if Quick finds nothing.</property>
+                    <property name="activatable-widget">q2</property>
+                    <child type="prefix"><object class="GtkCheckButton" id="q2"><property name="valign">center</property><property name="group">q1</property></object></child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </property>
+      </object>
+    </property>
+  </object>
+</interface>

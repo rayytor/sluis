@@ -1,0 +1,3 @@
+[env]
+# `cargo run` finds the schema compiled by build.rs
+GSETTINGS_SCHEMA_DIR = { value = "target/gschemas", relative = true }

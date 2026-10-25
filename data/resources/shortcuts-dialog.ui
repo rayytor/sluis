@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Loaded by AdwApplication from the resource base path; it also provides
+     app.shortcuts (Ctrl+?) to open this dialog. -->
+<interface domain="sluis">
+  <object class="AdwShortcutsDialog" id="shortcuts_dialog">
+    <child>
+      <object class="AdwShortcutsSection">
+        <property name="title" translatable="yes">General</property>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Preferences</property>
+            <property name="action-name">app.preferences</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Keyboard Shortcuts</property>
+            <property name="action-name">app.shortcuts</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Check Your Sites</property>
+            <property name="action-name">win.check-sites</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Unblock Sites</property>
+            <property name="action-name">win.scan</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Search Methods</property>
+            <property name="accelerator">&lt;Control&gt;f</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Close Window</property>
+            <property name="action-name">window.close</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes">Quit</property>
+            <property name="action-name">app.quit</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Home: a site stopped opening. The fix is one obvious button. -->
+<interface>
+  <object class="AdwApplicationWindow" id="window">
+    <property name="title">Zapret</property>
+    <property name="content">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar">
+            <property name="title-widget">
+              <object class="AdwWindowTitle">
+                <property name="title">Zapret</property>
+                <property name="subtitle">Home Wi‑Fi</property>
+              </object>
+            </property>
+            <child type="end">
+              <object class="GtkMenuButton">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="tooltip-text">Main Menu</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <property name="content">
+          <object class="GtkScrolledWindow">
+            <property name="hscrollbar-policy">never</property>
+            <property name="child">
+              <object class="AdwClamp">
+                <property name="maximum-size">520</property>
+                <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+                    <property name="spacing">24</property>
+                    <property name="margin-top">24</property>
+                    <property name="margin-bottom">24</property>
+                    <property name="margin-start">12</property>
+                    <property name="margin-end">12</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">6</property>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="icon-name">sluis-chained-symbolic</property>
+                            <property name="pixel-size">64</property>
+                            <property name="halign">center</property>
+                            <property name="margin-bottom">12</property>
+                            <style><class name="hero-icon"/><class name="bad"/></style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="label">Discord Is Blocked</property>
+                            <property name="wrap">True</property>
+                            <property name="justify">center</property>
+                            <style><class name="title-1"/></style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="label">Your internet provider found a new way to block it. Zapret can usually get around it again in about a minute.</property>
+                            <property name="wrap">True</property>
+                            <property name="justify">center</property>
+                            <property name="max-width-chars">44</property>
+                            <style><class name="dim-label"/></style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton">
+                            <property name="label">Unblock It</property>
+                            <property name="halign">center</property>
+                            <property name="margin-top">18</property>
+                            <style><class name="pill"/><class name="suggested-action"/></style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <child>
+                          <object class="AdwSwitchRow">
+                            <property name="title">Unblocking</property>
+                            <property name="subtitle">On · Starts by itself with your computer</property>
+                            <property name="active">True</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="title">Your Sites</property>
+                        <property name="description">Checked 2 minutes ago</property>
+                        <property name="header-suffix">
+                          <object class="GtkButton">
+                            <property name="valign">center</property>
+                            <property name="child">
+                              <object class="AdwButtonContent">
+                                <property name="icon-name">view-refresh-symbolic</property>
+                                <property name="label">Check Now</property>
+                              </object>
+                            </property>
+                            <style><class name="flat"/></style>
+                          </object>
+                        </property>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title">Discord</property>
+                            <property name="subtitle">discord.com · Blocked by your internet provider</property>
+                            <child type="suffix"><object class="GtkLabel"><property name="label">Blocked</property><style><class name="warning"/></style></object></child>
+                            <child type="suffix"><object class="GtkImage"><property name="icon-name">dialog-warning-symbolic</property><style><class name="warning"/></style></object></child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title">YouTube</property>
+                            <property name="subtitle">youtube.com</property>
+                            <child type="suffix"><object class="GtkLabel"><property name="label">Opens</property><style><class name="dim-label"/></style></object></child>
+                            <child type="suffix"><object class="GtkImage"><property name="icon-name">object-select-symbolic</property><style><class name="success"/></style></object></child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title">Roblox</property>
+                            <property name="subtitle">roblox.com</property>
+                            <child type="suffix"><object class="GtkLabel"><property name="label">Opens</property><style><class name="dim-label"/></style></object></child>
+                            <child type="suffix"><object class="GtkImage"><property name="icon-name">object-select-symbolic</property><style><class name="success"/></style></object></child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title">Wattpad</property>
+                            <property name="subtitle">wattpad.com</property>
+                            <child type="suffix"><object class="GtkLabel"><property name="label">Opens</property><style><class name="dim-label"/></style></object></child>
+                            <child type="suffix"><object class="GtkImage"><property name="icon-name">object-select-symbolic</property><style><class name="success"/></style></object></child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title">How Zapret unblocks</property>
+                            <property name="subtitle">Method 1 · No longer works for Discord</property>
+                            <property name="activatable">True</property>
+                            <child type="suffix"><object class="GtkImage"><property name="icon-name">go-next-symbolic</property></object></child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title">Which sites</property>
+                            <property name="subtitle">All sites, except 1</property>
+                            <property name="activatable">True</property>
+                            <child type="suffix"><object class="GtkImage"><property name="icon-name">go-next-symbolic</property></object></child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </property>
+          </object>
+        </property>
+      </object>
+    </property>
+  </object>
+</interface>

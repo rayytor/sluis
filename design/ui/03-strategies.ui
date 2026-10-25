@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Strategies: human names, ranked, ONE choice (radio). Raw arguments live
+     one level deeper. Choosing applies at once, then re-checks sites. -->
+<interface>
+  <object class="AdwApplicationWindow" id="window">
+    <property name="title">Methods</property>
+    <property name="content">
+      <object class="AdwToastOverlay" id="toasts">
+        <property name="child">
+          <object class="AdwToolbarView">
+            <child type="top">
+              <object class="AdwHeaderBar">
+                <child type="start">
+                  <object class="GtkButton">
+                    <property name="icon-name">go-previous-symbolic</property>
+                    <property name="tooltip-text">Back</property>
+                  </object>
+                </child>
+                <property name="title-widget">
+                  <object class="AdwWindowTitle">
+                    <property name="title">Methods</property>
+                    <property name="subtitle">Home Wi‑Fi</property>
+                  </object>
+                </property>
+                <child type="end">
+                  <object class="GtkToggleButton">
+                    <property name="icon-name">system-search-symbolic</property>
+                    <property name="tooltip-text">Search (Ctrl+F)</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <property name="content">
+              <object class="AdwPreferencesPage">
+                <property name="description">Different ways Zapret can get around blocks. The best one is already picked for you. If you pick another, Zapret checks your sites straight away.</property>
+                <child>
+                  <object class="AdwPreferencesGroup">
+                    <property name="title">Best for You</property>
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title">Method 1</property>
+                        <property name="subtitle">Opens all 4 of your sites · Fastest</property>
+                        <property name="activatable-widget">r1</property>
+                        <child type="prefix"><object class="GtkCheckButton" id="r1"><property name="active">True</property><property name="valign">center</property></object></child>
+                        <child type="suffix"><object class="GtkLabel"><property name="label">In Use</property><property name="valign">center</property><style><class name="tag"/></style></object></child>
+                        <child type="suffix"><object class="GtkButton"><property name="icon-name">go-next-symbolic</property><property name="valign">center</property><property name="tooltip-text">Details</property><style><class name="flat"/></style></object></child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwPreferencesGroup">
+                    <property name="title">Also Work</property>
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title">Method 2</property>
+                        <property name="subtitle">Opens all 4 of your sites</property>
+                        <property name="activatable-widget">r2</property>
+                        <child type="prefix"><object class="GtkCheckButton" id="r2"><property name="group">r1</property><property name="valign">center</property></object></child>
+                        <child type="suffix"><object class="GtkButton"><property name="icon-name">go-next-symbolic</property><property name="valign">center</property><style><class name="flat"/></style></object></child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title">Method 3</property>
+                        <property name="subtitle">Opens all 4 of your sites · A little slower</property>
+                        <property name="activatable-widget">r3</property>
+                        <child type="prefix"><object class="GtkCheckButton" id="r3"><property name="group">r1</property><property name="valign">center</property></object></child>
+                        <child type="suffix"><object class="GtkButton"><property name="icon-name">go-next-symbolic</property><property name="valign">center</property><style><class name="flat"/></style></object></child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title">Method 4</property>
+                        <property name="subtitle">Opens all 4 of your sites · Slower</property>
+                        <property name="activatable-widget">r4</property>
+                        <child type="prefix"><object class="GtkCheckButton" id="r4"><property name="group">r1</property><property name="valign">center</property></object></child>
+                        <child type="suffix"><object class="GtkButton"><property name="icon-name">go-next-symbolic</property><property name="valign">center</property><style><class name="flat"/></style></object></child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwPreferencesGroup">
+                    <property name="title">Not Recommended</property>
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title">Method 5</property>
+                        <property name="subtitle">Opens your sites, but stops 2 others from working</property>
+                        <property name="activatable-widget">r5</property>
+                        <child type="prefix"><object class="GtkCheckButton" id="r5"><property name="group">r1</property><property name="valign">center</property></object></child>
+                        <child type="suffix"><object class="GtkImage"><property name="icon-name">dialog-warning-symbolic</property><property name="tooltip-text">Stops other sites from working</property><style><class name="warning"/></style></object></child>
+                        <child type="suffix"><object class="GtkButton"><property name="icon-name">go-next-symbolic</property><property name="valign">center</property><style><class name="flat"/></style></object></child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title">Method 6</property>
+                        <property name="subtitle">Opens only 1 of your 4 sites</property>
+                        <property name="activatable-widget">r6</property>
+                        <child type="prefix"><object class="GtkCheckButton" id="r6"><property name="group">r1</property><property name="valign">center</property></object></child>
+                        <child type="suffix"><object class="GtkButton"><property name="icon-name">go-next-symbolic</property><property name="valign">center</property><style><class name="flat"/></style></object></child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwButtonRow">
+                        <property name="title">Show 104 More</property>
+                        <property name="end-icon-name">go-down-symbolic</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwPreferencesGroup">
+                    <child>
+                      <object class="AdwButtonRow">
+                        <property name="title">Add Your Own Method…</property>
+                        <property name="start-icon-name">list-add-symbolic</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </property>
+          </object>
+        </property>
+      </object>
+    </property>
+  </object>
+</interface>

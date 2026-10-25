@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Methods (design/screens/03-strategies.png). Groups and rows are built
+     by src/pages/methods.rs. -->
+<interface domain="sluis">
+  <object class="AdwNavigationPage" id="page">
+    <property name="title" translatable="yes">Methods</property>
+    <property name="tag">methods</property>
+    <property name="child">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar">
+            <child type="end">
+              <object class="GtkToggleButton" id="search_button">
+                <property name="icon-name">system-search-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Search</property>
+                <property name="active" bind-source="search_bar" bind-property="search-mode-enabled" bind-flags="bidirectional|sync-create"/>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child type="top">
+          <object class="GtkSearchBar" id="search_bar">
+            <property name="child">
+              <object class="AdwClamp">
+                <property name="maximum-size">400</property>
+                <property name="child">
+                  <object class="GtkSearchEntry" id="search">
+                    <property name="placeholder-text" translatable="yes">Search methods</property>
+                    <property name="hexpand">True</property>
+                  </object>
+                </property>
+              </object>
+            </property>
+          </object>
+        </child>
+        <property name="content">
+          <object class="AdwPreferencesPage" id="preferences">
+            <property name="description" translatable="yes">Different ways Sluis can get around blocks. The best one is picked for you. If you pick another, Sluis checks your sites straight away and switches back if one stops opening.</property>
+          </object>
+        </property>
+      </object>
+    </property>
+  </object>
+</interface>
