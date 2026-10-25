@@ -1,5 +1,5 @@
 //! The quick scan engine, with no GTK dependency: diagnosis, candidate list,
-//! parallel isolated testing and ranking (docs/PLAN.md §3.2). The helper runs it
+//! parallel isolated testing and ranking. The helper runs it
 //! as root and supplies the [`Sandbox`]: private nfqws instances, each fed
 //! by its own range of source ports. [`blockcheck`] reads zapret's own
 //! exhaustive scan for the Thorough Scan.

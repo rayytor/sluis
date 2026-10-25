@@ -1,5 +1,5 @@
 //! Which network the computer is on, so each network can keep the method
-//! that works there (docs/PLAN.md §2.5). A network is its router: the gateway's
+//! that works there. A network is its router: the gateway's
 //! hardware address, read from /proc. The name people know it by comes
 //! from NetworkManager or iwd when either runs.
 

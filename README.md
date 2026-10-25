@@ -102,8 +102,8 @@ language, add it to `po/LINGUAS` and copy `po/sluis.pot` to `po/<lang>.po`.
 | `crates/helper` | `sluis-helper`, the privileged D-Bus service |
 | `data/` | Desktop file, MetaInfo, GSettings schema, icons, UI, the helper's system files |
 | `po/` | Translations |
-| `docs/` | [User guide](docs/GUIDE.md), [design plan](docs/PLAN.md) |
-| `design/` | Mockups (still called Zapret), icon generators and the tools that render them |
+| `docs/` | [User guide](docs/GUIDE.md) |
+| `design/` | The logo and the scripts that draw the app icon |
 | `packaging/` | The .deb and .rpm build scripts and the RPM spec |
 | `website/` | The download page at rayytor.github.io/sluis |
 

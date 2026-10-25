@@ -1,4 +1,4 @@
-//! Home: does everything work? (design/screens/01-home.png, 02-home-problem.png)
+//! Home: does everything work?
 
 use std::cell::{Cell, RefCell};
 use std::rc::Rc;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- One method (design/screens/04-strategy-details.png); filled in by
+<!-- One method; filled in by
      src/pages/method.rs. -->
 <interface domain="sluis">
   <object class="AdwNavigationPage" id="page">

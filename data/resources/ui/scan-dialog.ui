@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Unblock Sites: which sites, looking, the answer
-     (design/screens/05-scan-sites.png, 06-scan-progress.png, 07-scan-result.png).
      Rows are added from code (src/pages/scan.rs). -->
 <interface>
   <object class="AdwDialog" id="dialog">
