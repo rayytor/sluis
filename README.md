@@ -1,4 +1,9 @@
-# Sluis
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="design/logo/sluis-logo-dark.svg">
+    <img src="design/logo/sluis-logo-light.svg" alt="Sluis" width="420">
+  </picture>
+</p>
 
 Sluis is a GNOME app for [Zapret](https://github.com/bol-van/zapret), bol-van's
 tool for getting past deep packet inspection. If your internet provider blocks
