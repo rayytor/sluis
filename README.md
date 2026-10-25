@@ -106,6 +106,7 @@ language, add it to `po/LINGUAS` and copy `po/sluis.pot` to `po/<lang>.po`.
 | `design/` | The logo and the scripts that draw the app icon |
 | `packaging/` | The .deb and .rpm build scripts and the RPM spec |
 | `website/` | The download page at rayytor.github.io/sluis |
+| `tools/` | `check.sh` (the CI checks) and `container.sh` (build in a container) |
 
 ## License
 
