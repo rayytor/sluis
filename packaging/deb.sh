@@ -1,7 +1,8 @@
 #!/bin/sh
-# Builds dist/sluis_amd64.deb. Run on Ubuntu 26.04 or newer (Sluis needs
-# libadwaita 1.8) with the build dependencies installed; the release
-# workflow does this in a container.
+# Builds dist/sluis_amd64.deb. Run on Debian 13, the oldest system it
+# supports (Sluis needs libadwaita 1.7), so the package doesn't ask for a
+# newer glibc than Debian has. The release workflow does this in the
+# rust:trixie container.
 set -eu
 cd "$(dirname "$0")/.."
 version=$(sed -n "s/^  version: '\(.*\)',/\1/p" meson.build)
@@ -21,8 +22,8 @@ install -Dm644 COPYING "$root/usr/share/doc/sluis/copyright"
 printf 'Source: sluis\n\nPackage: sluis\nArchitecture: any\n' >"$work/debian/control"
 shlibs=$(cd "$work" && dpkg-shlibdeps -O "$root/usr/bin/sluis" "$root/usr/libexec/sluis-helper" |
 	sed -n 's/^shlibs:Depends=//p' |
-	# the symbols alone ask for less than the UI files use (AdwShortcutsDialog)
-	sed -e 's/libadwaita-1-0 ([^)]*)/libadwaita-1-0 (>= 1.8)/' -e 's/libgtk-4-1 ([^)]*)/libgtk-4-1 (>= 4.18)/')
+	# the symbols alone ask for less than the UI files use
+	sed -e 's/libadwaita-1-0 ([^)]*)/libadwaita-1-0 (>= 1.7)/' -e 's/libgtk-4-1 ([^)]*)/libgtk-4-1 (>= 4.18)/')
 
 cat >"$root/DEBIAN/control" <<CONTROL
 Package: sluis

@@ -17,7 +17,7 @@ license.workspace = true
 repository.workspace = true
 
 [dependencies]
-adw = { package = "libadwaita", version = "0.9", features = ["v1_8"] }
+adw = { package = "libadwaita", version = "0.9", features = ["v1_7"] }
 futures-util = { version = "0.3", default-features = false }
 gettext-rs = { version = "0.8", features = ["gettext-system"] }
 gtk = { package = "gtk4", version = "0.11", features = ["v4_18"] }

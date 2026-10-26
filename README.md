@@ -50,8 +50,8 @@ Zapret from starting, it's rolled back.
 
 ## Building
 
-You need Rust 1.85+, meson, and development files for GTK 4 (4.18+),
-libadwaita (1.8+) and GLib. On Fedora that's
+You need Rust 1.92+, meson, and development files for GTK 4 (4.18+),
+libadwaita (1.7+) and GLib. On Fedora that's
 `gtk4-devel libadwaita-devel glib2-devel`.
 
 ```sh
@@ -81,9 +81,10 @@ polkit/D-Bus files.
 
 ## Packages
 
-`packaging/deb.sh` builds `dist/sluis_amd64.deb` on Ubuntu 26.04 or newer,
-and `packaging/rpm.sh` builds `dist/sluis.x86_64.rpm` on Fedora 44 or newer.
-Older releases of both, and Debian 13, ship a libadwaita older than 1.8.
+`packaging/deb.sh` builds `dist/sluis_amd64.deb` on Debian 13, and the
+package installs on Debian 13 or newer and Ubuntu 25.04 or newer.
+`packaging/rpm.sh` builds `dist/sluis.x86_64.rpm` on Fedora 44 or newer.
+Older releases ship a libadwaita older than 1.7.
 Pushing a `v*` tag builds both in CI and publishes them as a GitHub release,
 which is what the website's download links point at.
 

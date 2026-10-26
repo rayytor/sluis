@@ -20,7 +20,7 @@ BuildRequires:  desktop-file-utils
 BuildRequires:  systemd-rpm-macros
 
 # the UI files use widgets newer than the symbols rpm picks up
-Requires:       libadwaita >= 1.8
+Requires:       libadwaita >= 1.7
 Requires:       gtk4 >= 4.18
 Requires:       curl
 Requires:       nftables

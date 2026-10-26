@@ -13,14 +13,16 @@ permissions:
 jobs:
   deb:
     runs-on: ubuntu-latest
-    container: ubuntu:26.04
+    # Debian 13 with a current Rust; Debian's own rustc is too old for the
+    # locked crates
+    container: rust:trixie
     steps:
       - name: Install dependencies
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
           apt-get update
-          apt-get install -y --no-install-recommends cargo rustc meson pkg-config \
+          apt-get install -y --no-install-recommends meson pkg-config \
             gettext desktop-file-utils libgtk-4-dev libadwaita-1-dev libglib2.0-dev \
             libglib2.0-dev-bin appstream dpkg-dev ca-certificates
       - uses: actions/checkout@v4

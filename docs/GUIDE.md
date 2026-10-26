@@ -22,8 +22,8 @@ Zapret yourself: Sluis installs it for you.
 
 ## What you need
 
-- A computer with Linux and the GNOME desktop: Ubuntu 26.04 or newer, or
-  Fedora 44 or newer.
+- A computer with Linux and the GNOME desktop: Ubuntu 25.04 or newer,
+  Debian 13 or newer, or Fedora 44 or newer.
 - Your computer's password. Sluis asks for it before it changes anything,
   because it changes how your computer reaches websites.
 
