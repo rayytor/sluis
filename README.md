@@ -36,7 +36,7 @@ Wi-Fi network. On first run it downloads the latest Zapret release, checks the
 SHA-256 and installs it; updates keep your settings and roll back if Zapret
 won't start.
 
-This is 0.9.0, the first preview. I use it every day, but it hasn't been tried
+This is 0.9.1, an early preview. I use it every day, but it hasn't been tried
 on a clean install of every distro yet. English and Turkish.
 
 ## How it works

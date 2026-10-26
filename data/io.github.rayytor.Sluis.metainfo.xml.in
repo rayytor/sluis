@@ -71,6 +71,11 @@
   </screenshots>
 
   <releases>
+    <release version="0.9.1" date="2026-10-26" type="development">
+      <description>
+        <p>Sluis now runs on Debian 13 and Ubuntu 25.04.</p>
+      </description>
+    </release>
     <release version="0.9.0" date="2026-10-24" type="development">
       <description>
         <p>First preview of Sluis. It checks whether your sites open, finds a way around a block in about a minute, switches back by itself if a change breaks a site, remembers what works on each network, and can install and update Zapret for you.</p>

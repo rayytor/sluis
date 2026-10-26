@@ -82,6 +82,10 @@ msgid "Choose which sites Sluis touches"
 msgstr ""
 
 #: data/io.github.rayytor.Sluis.metainfo.xml.in:76
+msgid "Sluis now runs on Debian 13 and Ubuntu 25.04."
+msgstr ""
+
+#: data/io.github.rayytor.Sluis.metainfo.xml.in:81
 msgid ""
 "First preview of Sluis. It checks whether your "
 "sites open, finds a way around a block in about a minute, switches back by "
